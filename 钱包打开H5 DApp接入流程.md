@@ -39,6 +39,9 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 
 ## 钱包和DApp接入步骤
 
+### 前提条件
+使用前，你需要联系[本体机构合作](https://info.ont.io/cooperation/en)
+
 ### 查询账号或身份信息步骤
 
 #### DApp发起查询账号或身份信息请求
