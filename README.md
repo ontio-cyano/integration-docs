@@ -3,7 +3,7 @@
 
 移动端dAPI规范文档包括唤醒、扫码、钱包中打开H5 DApp三种场景。详细请看[dAPI for Mobile Specification](https://github.com/ontio-cyano/CEPs/blob/master/CEP1.mediawiki)
 
-移动版Cyano钱包集成provider功能目前还没开发完成，链接地址[cyano-android](https://github.com/ontio-cyano/cyano-android),[cyano-ios](https://github.com/ontio-cyano/cyano-ios)。
+移动版Cyano钱包集成provider功能目前还在开发中，链接地址[cyano-android](https://github.com/ontio-cyano/cyano-android),[cyano-ios](https://github.com/ontio-cyano/cyano-ios)。
 
 H5 DApp演示: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
 
