@@ -19,6 +19,11 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 
 - 1 钱包打开H5 DApp
 
+### H5 DApp向获取Provider信息
+
+- 1 DApp请求Provider信息
+- 2 钱包返回Provider信息
+
 ### H5 DApp向获取账户或身份信息
 
 - 1 DApp请求账户或身份信息
@@ -42,6 +47,44 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 ### 前提条件
 使用前，你需要联系[本体机构合作](https://info.ont.io/cooperation/en)
 
+
+### 查询Provider信息步骤
+
+#### DApp发起查询Provider信息请求
+
+数据如下，**URI编码，Base64编码**后发送请求：
+```
+
+{
+	"action": "getProvider", 
+	"version": "v1.0.0",
+	"params": {
+	}
+}
+
+
+```
+
+|字段|类型|定义|
+| :---| :---| :---|
+| action   |  string |  操作类型 |
+
+#### 钱包返回Provider信息
+
+**URI解码，Base64解码**后，获取到的数据如下：
+```
+{
+	"action": "getProvider", 
+	"version": "v1.0.0",
+	"error": 0,
+	"desc": "SUCCESS",
+	"result": {
+	    "provider": "cyano walllet",
+	    "version": "1.0.0"
+	}
+}
+```
+
 ### 查询账号或身份信息步骤
 
 #### DApp发起查询账号或身份信息请求
@@ -63,7 +106,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 
 |字段|类型|定义|
 | :---| :---| :---|
-| action   |  string |  定义此二维码的功能，登录设定为"Login"，调用智能合约设定为"invoke" |
+| action   |  string |  操作类型 |
 | dappName   | string  | dapp名字 |
 | dappIcon   | string  | dapp icon信息 |
 
@@ -101,7 +144,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 
 |字段|类型|定义|
 | :---| :---| :---|
-| action   |  string |  定义此二维码的功能，登录设定为"Login"，调用智能合约设定为"invoke" |
+| action   |  string |  操作类型 |
 | type   |  string |  定义是使用ontid登录设定为"ontid"，钱包地址登录设定为"account" |
 | dappName   | string  | dapp名字 |
 | dappIcon   | string  | dapp icon信息 |
@@ -130,7 +173,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 
 |字段|类型|定义|
 | :---| :---| :---|
-| action | string | 定义此二维码的功能，登录设定为"login"，调用智能合约设定为"invoke" |
+| action | string | 操作类型 |
 | result | string | 返回结果 |
 | type   |  string |  定义是使用ontid登录设定为"ontid"，钱包地址登录设定为"account" |
 | user | string | 用户做签名的账户，比如用户的ontid或者钱包地址 |
