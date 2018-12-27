@@ -2,7 +2,7 @@
 
 移动版dApi只提供几个重要接口，查询相关的接口可以直接调用区块链浏览器的api接口查询,[explorer api](http://dev-docs.ont.io/#/docs-en/explorer/overview).
 
-
+移动版dApi安装方法与使用: [cyano-dapi-mobile](https://github.com/ontio-cyano/cyano-dapi-mobile)
 
 ### dApi接口初始化
 
@@ -10,9 +10,8 @@ chrome插件版需要注册，移动版不需要。
 
 #### 移动版本
 ```
-import { CyanoBridge } from 'cyanobridge'
-const cyanoBridge = new CyanoBridge();
-
+import { client } from 'cyanobridge'
+client.registerClient();
 
 ```
 
@@ -30,18 +29,20 @@ client.registerClient({})
 #### 移动版本
 
 ```
+import { client } from 'cyanobridge'
+
 const params = {
-    dappName: 'My dapp',
-    dappIcon: '' // some url points to the dapp icon
+​    dappName: 'My dapp',
+​    dappIcon: '' // some url points to the dapp icon
 }
 
 try {
-    const res = cyanoBridge.getAccount(params)  // const res = cyanoBridge.getIdentity(params)
-    console.log(res)
+​    const res = await client.api.asset.getAccount(params);
+    const res = await client.api.identity.getIdentity(params);
+​    console.log(res)
 } catch(err) {
-    console.log(err)
+​    console.log(err)
 }
-
 
 ```
 
@@ -49,7 +50,7 @@ try {
 #### chrome插件版
 ```
 account = await client.api.asset.getAccount()
-
+res = await client.api.identity.getIdentity();
 ```
 
 ### 登录
@@ -60,21 +61,20 @@ account = await client.api.asset.getAccount()
 
 ```
 const params = {
-    type: 'account',// account or identity that will sign the message
-    dappName: 'My dapp', // dapp's name
-    dappIcon: 'http://mydapp.com/icon.png', // some url that points to the dapp's icon
-    message: 'test message', // message sent from dapp that will be signed by native client
-    expired: new Date('2019-01-01').getTime(), // expired date of login
-    callback: '' // callback url of dapp
+​    type: 'account',// account or identity that will sign the message
+​    dappName: 'My dapp', // dapp's name
+​    dappIcon: 'http://mydapp.com/icon.png', // some url that points to the dapp's icon
+​    message: 'test message', // message sent from dapp that will be signed by native client
+​    expired: new Date('2019-01-01').getTime(), // expired date of login
+​    callback: '' // callback url of dapp
 }
 let res;
 try {
-    res = cyanoBridge.login(params)
-    console.log(res)
+​    res = await client.api.message.login(params);
+​    console.log(res)
 }catch(err) {
-    console.log(err)
+​    console.log(err)
 }
-// verify signature here
 ```
 
 #### chrome插件版
@@ -92,23 +92,33 @@ const result = await client.api.message.signMessage({ message });
 const scriptHash = 'cd948340ffcf11d4f5494140c93885583110f3e9';
 const operation = 'test'
 const args = [
-    {
-        type: 'String',
-        value: 'helloworld'
-    }
+​    {
+​        type: 'String',
+​        value: 'helloworld'
+​    }
 ]
 const gasPrice = 500;
 const gasLimit = 20000;
 const payer = 'AecaeSEBkt5GcBCxwz1F41TvdjX3dnKBkJ'
 const config = {
-    "login": true,
-    "message": "invoke smart contract test",
-    "url": ""  
+​    "login": true,
+​    "message": "invoke smart contract test",
+​    "qrcodeUrl": "" ,
+    "callback": ""
 }
+const params = {
+          scriptHash,
+          operation,
+          args,
+          gasPrice,
+          gasLimit,
+          payer,
+          config
+        }
 try {
-   const res = cyanoBridge.invoke(scriptHash, operation, args, gasPrice, gasLimit, payer, config) 
-} catch(err) {
-    console.log(err)
+   const res = await client.api.smartContract.invoke(params);
+   } catch(err) {
+​    console.log(err)
 }
 
 ```
