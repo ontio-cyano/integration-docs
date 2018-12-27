@@ -197,6 +197,12 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 
 ### 调用合约步骤
 
+action是invoke: 走正常流程。
+
+action是invokeRead: 是预执行交易，用户不需要签名，返回预执行结果给DApp。
+
+action是invokePasswordFree: 有些游戏会用到自动投注功能，比如每隔10秒投注一次，用户只需要输入一次密码。当用户离开当前DApp时，记得清空内存中的密码。
+
 #### DApp发起调用合约请求
 
 数据如下，**URI编码，Base64编码**后发送请求：
@@ -207,7 +213,6 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 	"version": "v1.0.0",
 	"params": {
 		"invokeConfig": {
-			"autosign": true,
 			"contractHash": "16edbe366d1337eb510c2ff61099424c94aeef02",
 			"functions": [{
 				"operation": "method name",
@@ -236,11 +241,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 			}],
 			"payer": "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ",
 			"gasLimit": 20000,
-			"gasPrice": 500,
-			"signature": [{
-				"m": 1,
-				"signers": ["AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"]
-			}]
+			"gasPrice": 500
 		}
 	}
 }
