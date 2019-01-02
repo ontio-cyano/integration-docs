@@ -30,17 +30,21 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 - 2 用户接受请求，返回账户或身份信息
 
 
-### Login
-- 1 DApp请求对message做请求（[DApp发起登录请求](#DApp发起登录请求)）
+### 登录Login
+- 1 DApp请求对message做签名（[DApp发起登录请求](#DApp发起登录请求)）
 - 2 钱包用户对message做签名，返回签名数据（[钱包响应登录请求](#钱包响应登录请求)）
 
+### 消息签名signMessage
 
-### Invoke Smart contract
+
+### 调用合约Invoke Smart contract
 - 1 DApp请求调用合约（[DApp发起调用合约请求](#DApp发起调用合约请求)）
 - 2 钱包构造交易，用户签名
 - 3 钱包预执行交易（[预执行交易](#预执行交易)）   
 - 4 钱包发送交易
 - 3 钱包返回交易Hash（[钱包响应调用合约请求](#钱包响应调用合约请求)）
+
+
 
 ## 钱包和DApp接入步骤
 
@@ -193,6 +197,34 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
   "result": 1
 }
 ```
+
+
+### 消息签名步骤
+
+跟login一样，但DApp请求时不需要DApp名字和icon。
+
+#### DApp发起签名请求
+
+
+数据如下，**URI编码，Base64编码**后发送请求：
+```
+{
+	"action": "signMessage",
+	"version": "v1.0.0",
+	"params": {
+		"type": "ontid or account",
+		"message": "helloworld",
+	}
+}
+```
+
+|字段|类型|定义|
+| :---| :---| :---|
+| action   |  string |  操作类型 |
+| type   |  string |  定义是使用ontid登录设定为"ontid"，钱包地址登录设定为"account"，不填就默认是"account" |
+| message   | string  | 随机生成，用于校验身份  |
+
+
 
 
 ### 调用合约步骤
