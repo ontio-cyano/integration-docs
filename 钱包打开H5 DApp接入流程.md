@@ -203,6 +203,18 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 
 跟login一样，但DApp请求时不需要DApp名字和icon。
 
+数据如下，**URI编码，Base64编码**后发送请求：
+
+```
+{
+	"action": "signMessage",
+	"version": "v1.0.0",
+	"params": {
+		"type": "ontid or account",
+		"message": "helloworld",
+	}
+}
+```
 #### DApp发起签名请求
 
 
