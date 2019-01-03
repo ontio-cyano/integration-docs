@@ -379,10 +379,10 @@ action是invokePasswordFree: 有些游戏会用到自动投注功能，比如每
 ##### 钱包
 * [cyano-android](https://github.com/ontio-cyano/cyano-android)
 * [cyano-ios](https://github.com/ontio-cyano/cyano-ios)
-* [WebViewActivity.java](https://github.com/ontio-cyano/cyano-android/blob/master/CyanoWallet/app/src/main/java/com/github/ont/cyanowallet/game/GameWebActivity.java)
-* [DAppViewController.m](https://github.com/ontio-cyano/cyano-ios/blob/master/Cyano%20Wallet/Cyano%20Wallet/Classes/View/Discover/DAppViewController.m)
 
 ##### dApi-mobile client sdk
 * [cyano-dapi-mobile](https://github.com/ontio-cyano/cyano-dapi-mobile)
 
 ##### dApi-mobile provider sdk
+* [cyano-android-sdk](https://github.com/ontio-cyano/cyano-android-sdk)
+* [cyano-ios-sdk](https://github.com/ontio-cyano/cyano-ios-sdk)
