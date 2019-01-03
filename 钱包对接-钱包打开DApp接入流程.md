@@ -61,6 +61,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 
 {
 	"action": "getProvider", 
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"version": "v1.0.0",
 	"params": {
 	}
@@ -80,6 +81,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 {
 	"action": "getProvider", 
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"error": 0,
 	"desc": "SUCCESS",
 	"result": {
@@ -99,6 +101,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 {
 	"action": "getAccount", // or getIdentity
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
 		"dappName": "dapp Name",
 		"dappIcon": "dapp Icon"
@@ -121,6 +124,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 {
 	"action": "getAccount", // or getIdentity
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"error": 0,
 	"desc": "SUCCESS",
 	"result": "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"  // or  "did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
@@ -137,6 +141,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 {
 	"action": "login",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
 		"type": "ontid or account",
 		"dappName": "dapp Name",
@@ -163,6 +168,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 {
 	"action": "login",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"error": 0,
     "desc": "SUCCESS",
 	"result": {
@@ -192,6 +198,8 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 ```
 {
   "action": "login",
+  "version": "v1.0.0",  
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a", 
   "error": 8001,
   "desc": "PARAMS ERROR",
   "result": 1
@@ -209,6 +217,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 {
 	"action": "signMessage",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
 		"type": "ontid or account",
 		"message": "helloworld",
@@ -223,6 +232,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 {
 	"action": "signMessage",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
 		"type": "ontid or account",
 		"message": "helloworld",
@@ -257,6 +267,7 @@ action是invokePasswordFree: 有些游戏会用到自动投注功能，比如每
 {
 	"action": "invoke",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
 		"invokeConfig": {
 			"contractHash": "16edbe366d1337eb510c2ff61099424c94aeef02",
@@ -314,6 +325,7 @@ action是invokePasswordFree: 有些游戏会用到自动投注功能，比如每
 ```
 {
   "action": "invoke",
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a", 
   "error": 0,
   "desc": "SUCCESS",
   "result": "tx hash"
@@ -325,7 +337,8 @@ action是invokePasswordFree: 有些游戏会用到自动投注功能，比如每
 ```
 {
   "action": "invoke",
-  "error": 8001,
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  
+  "error": 80001,
   "desc": "SEND TX ERROR",
   "result": ""
 }

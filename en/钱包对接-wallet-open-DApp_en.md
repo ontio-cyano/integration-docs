@@ -61,6 +61,7 @@ The data is as follows, **URI encoding, Base64 encoding** then send request：
 
 {
 	"action": "getProvider", 
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"version": "v1.0.0",
 	"params": {
 	}
@@ -80,6 +81,7 @@ The data is as follows, **URI encoding, Base64 encoding** then send request：
 {
 	"action": "getProvider", 
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"error": 0,
 	"desc": "SUCCESS",
 	"result": {
@@ -99,6 +101,7 @@ The data is as follows, **URI encoding, Base64 encoding** then send request:
 {
 	"action": "getAccount", // or getIdentity
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 		"dappName": "dapp Name",
 		"dappIcon": "dapp Icon"
@@ -121,6 +124,7 @@ The data is as follows, **URI encoding, Base64 encoding** then send request:
 {
 	"action": "getAccount", // or getIdentity
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"error": 0,
 	"desc": "SUCCESS",
 	"result": "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"  // or  "did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
@@ -137,6 +141,7 @@ The data is as follows, **URI encoding, Base64 encoding** then send request:
 {
 	"action": "login",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 		"type": "ontid or account",
 		"dappName": "dapp Name",
@@ -163,6 +168,7 @@ The data is as follows, **URI encoding, Base64 encoding** then send request:
 {
 	"action": "login",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"error": 0,
     "desc": "SUCCESS",
 	"result": {
@@ -192,6 +198,8 @@ The data is as follows, **URI encoding, Base64 encoding** then send request:
 ```
 {
   "action": "login",
+  "version": "v1.0.0",  
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
   "error": 8001,
   "desc": "PARAMS ERROR",
   "result": 1
@@ -209,6 +217,7 @@ The data is as follows, **URI encoding, Base64 encoding** then send request:
 {
 	"action": "signMessage",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 		"type": "ontid or account",
 		"message": "helloworld",
@@ -223,6 +232,7 @@ The data is as follows, **URI encoding, Base64 encoding** then send request:
 {
 	"action": "signMessage",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 		"type": "ontid or account",
 		"message": "helloworld",
@@ -254,6 +264,7 @@ The data is as follows, **URI encoding, Base64 encoding** send request:
 {
 	"action": "invoke",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 		"invokeConfig": {
 			"contractHash": "16edbe366d1337eb510c2ff61099424c94aeef02",
@@ -313,6 +324,8 @@ Wallet construction transaction
 ```
 {
   "action": "invoke",
+  "version": "v1.0.0",  
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
   "error": 0,
   "desc": "SUCCESS",
   "result": "tx hash"
@@ -324,6 +337,8 @@ Wallet construction transaction
 ```
 {
   "action": "invoke",
+  "version": "v1.0.0",  
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
   "error": 8001,
   "desc": "SEND TX ERROR",
   "result": ""
