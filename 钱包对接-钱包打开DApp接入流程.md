@@ -381,7 +381,7 @@ action是invokePasswordFree: 有些游戏会用到自动投注功能，比如每
 * [cyano-ios](https://github.com/ontio-cyano/cyano-ios)
 
 ##### dApi-mobile client sdk
-* [cyano-dapi-mobile](https://github.com/ontio-cyano/cyano-dapi-mobile)
+* [cyano-bridge](https://github.com/ontio-cyano/cyano-bridge)
 
 ##### dApi-mobile provider sdk
 * [cyano-android-sdk](https://github.com/ontio-cyano/cyano-android-sdk)
