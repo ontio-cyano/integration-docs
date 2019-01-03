@@ -1,20 +1,11 @@
 # dapi-mobile使用场景说明
 
+移动端dAPI规范文档包括唤醒、扫码、钱包中打开H5 DApp三种场景。对接请参考对应的对接文档。协议详情请看[CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEP1.mediawiki)
 
-移动端dAPI规范文档包括唤醒、扫码、钱包中打开H5 DApp三种场景。详细请看[dAPI for Mobile Specification](https://github.com/ontio-cyano/CEPs/blob/master/CEP1.mediawiki)
-
-移动版Cyano钱包集成provider功能目前还在开发中，链接地址[cyano-android](https://github.com/ontio-cyano/cyano-android),[cyano-ios](https://github.com/ontio-cyano/cyano-ios)。
-
-H5 DApp演示: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
-
-## 场景3： 钱包中打开H5 DApp
-
-1. Open DApp in Provider
-2. Get account or get identity
-3. Login DApp
-4. DApp Invoke smart contract
-
-![](images/scenario3.png)
+* [钱包对接-扫码接入流程](钱包对接-扫码接入流程.md)
+* [钱包对接-钱包打开DApp接入流程](钱包对接-钱包打开DApp接入流程.md)
+* [钱包对接-唤醒接入流程](钱包对接-唤醒接入流程.md)
+* [DAPP对接-钱包打开DAPP](DAPP对接-钱包打开DAPP.md)
 
 
 
@@ -30,9 +21,20 @@ H5 DApp演示: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-dem
 ![](images/invoke-with-login.png)
 
 
+## 场景3： 钱包中打开H5 DApp
+
+1. Open DApp in Provider
+2. Get account or get identity
+3. Login DApp
+4. DApp Invoke smart contract
+
+![](images/scenario3.png)
 
 ## 钱包演示
 
+移动版Cyano钱包源码链接地址[cyano-android](https://github.com/ontio-cyano/cyano-android),[cyano-ios](https://github.com/ontio-cyano/cyano-ios)。
+
+H5 DApp演示: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
 
 ### Open DApp in Provider
 
