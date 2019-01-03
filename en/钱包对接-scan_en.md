@@ -110,7 +110,7 @@ method: post
   "action": "login",
   "version": "v1.0.0",
   "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
-  "error": 8001,
+  "error": 80001,
   "desc": "PARAMS ERROR",
   "result": 1
 }
@@ -208,7 +208,7 @@ Provider constructs transactions, user signatures, pre-executed transactions, se
   "action": "invoke",
   "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
   "version": "v1.0.0", 
-  "error": 8001,
+  "error": 80001,
   "desc": "SEND TX ERROR",
   "result": 1
 }
