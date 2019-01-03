@@ -11,7 +11,7 @@ The parties involved in the process include:
 
 ## Interactive process description
 
-![login-invoke](images/split-login-invoke.png)
+![login-invoke](../images/split-login-invoke.png)
 
 ### Login
 - 1.1 Provider scans the QR code provided by dApp ([Login QR Code Standard](#Login-QR-Code-Standard))
