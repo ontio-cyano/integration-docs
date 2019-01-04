@@ -372,9 +372,9 @@ action是invokePasswordFree: 有些游戏会用到自动投注功能，比如每
 * [java sdk验签](https://github.com/ontio/ontology-java-sdk/blob/master/docs/cn/interface.md#%E7%AD%BE%E5%90%8D%E9%AA%8C%E7%AD%BE)
 * [ts sdk验签](https://github.com/ontio/ontology-ts-sdk/blob/master/test/message.test.ts)
 
-##### 合约查询方法
-* [java sdk 合约查询](https://github.com/ontio/ontology-java-sdk/blob/master/docs/cn/basic.md#%E4%B8%8E%E9%93%BE%E4%BA%A4%E4%BA%92%E6%8E%A5%E5%8F%A3)
-* [ts sdk 合约查询](https://github.com/ontio/ontology-ts-sdk/blob/master/test/websocket.test.ts)
+##### DApp后端查询交易事件
+* [java sdk 交易事件查询方法](https://github.com/ontio/ontology-java-sdk/blob/master/docs/cn/basic.md#%E4%B8%8E%E9%93%BE%E4%BA%A4%E4%BA%92%E6%8E%A5%E5%8F%A3)
+* [ts sdk 交易事件查询方法](https://github.com/ontio/ontology-ts-sdk/blob/master/test/websocket.test.ts)
 
 ##### 钱包
 * [cyano-android](https://github.com/ontio-cyano/cyano-android)
