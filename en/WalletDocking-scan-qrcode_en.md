@@ -40,6 +40,7 @@ Getting by scanning
 ```
 {
 	"action": "login",
+    "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
 	"version": "v1.0.0",
 	"params": {
 		"type": "ontid or account",
@@ -68,6 +69,7 @@ method: post
 ```
 {
 	"action": "login",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  
 	"version": "v1.0.0",
 	"params": {
 		"type": "ontid or account",
@@ -95,6 +97,7 @@ method: post
 ```
 {
   "action": "login",
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",   
   "error": 0,
   "desc": "SUCCESS",
   "result": true
@@ -106,7 +109,8 @@ method: post
 ```
 {
   "action": "login",
-  "error": 8001,
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",    
+  "error": 80001,
   "desc": "PARAMS ERROR",
   "result": 1
 }
@@ -120,6 +124,7 @@ getting by scanning
 ```
 {
 	"action": "invoke",
+    "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
 	"version": "v1.0.0",
 	"params": {
 		"login": true,
@@ -140,6 +145,7 @@ According to the qrcodeUrl in the QRcode, the data is as follows.
 ```
 {
 	"action": "invoke",
+    "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
 	"version": "v1.0.0",
 	"params": {
 		"invokeConfig": {
@@ -187,6 +193,7 @@ Provider builds a transaction and user signs it. Then Provider pre-executes the 
 ```
 {
   "action": "invoke",
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",    
   "error": 0,
   "desc": "SUCCESS",
   "result": "tx hash"
@@ -198,7 +205,8 @@ Provider builds a transaction and user signs it. Then Provider pre-executes the 
 ```
 {
   "action": "invoke",
-  "error": 8001,
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",    
+  "error": 80001,
   "desc": "SEND TX ERROR",
   "result": 1
 }
