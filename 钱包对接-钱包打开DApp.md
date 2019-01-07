@@ -52,6 +52,84 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 使用前，你需要联系[本体机构合作](https://info.ont.io/cooperation/en)
 
 
+## dAPI Provider SDK使用
+
+dAPI Provider SDK帮助Android webview和网页dapp之间通信。它对webview进行了一些方法的封装。分别支持Android、iOS：
+* [cyano-android-sdk](https://github.com/ontio-cyano/cyano-android-sdk)
+* [cyano-ios-sdk](https://github.com/ontio-cyano/cyano-ios-sdk)
+
+Android-sdk：
+
+```
+//init
+CyanoWebView cyanoWebView=new CyanoWebView(context);  
+cyanoWebView.loadUrl(url);
+
+//Action handle
+cyanoWebView.getNativeJsBridge().setHandleGetAccount(new NativeJsBridge.HandleGetAccount() {
+            @Override
+            public void handleAction(String data) {
+             
+            }
+	});
+	
+cyanoWebView.getNativeJsBridge().setHandleInvoke(new NativeJsBridge.HandleInvoke() {
+            @Override
+            public void handleAction(String data) {
+               
+            }
+	});	
+
+cyanoWebView.getNativeJsBridge().setHandleInvokeRead(new NativeJsBridge.HandleInvokeRead() {
+        @Override
+        public void handleAction(String data) {
+           
+        }
+});
+    	
+//response	
+Map map = new HashMap<>();
+map.put("action", "");
+map.put("error", 0);
+map.put("desc", "SUCCESS");
+map.put("result", message);
+cyanoWebView.sendBack(Base64.encodeToString(Uri.encode(JSON.toJSONString(map)).getBytes(), Base64.NO_WRAP));	
+```
+
+
+```
+RNJsWebView * webView = [[RNJsWebView alloc]initWithFrame:CGRectZero];
+[webView setURL:@""];
+```
+
+iOS-sdk：
+
+```
+
+
+[webView setGetAccountCallback:^(NSDictionary *callbackDic) {
+    
+}];
+
+
+[webView setInvokeTransactionCallback:^(NSDictionary *callbackDic) {
+
+}];
+
+[webView setInvokeReadCallback:^(NSDictionary *callbackDic) {
+    
+}];
+
+
+NSDictionary *params = @{@"action":@"",
+                         @"version":@"v1.0.0",
+                         @"error":@0,
+                         @"desc":@"SUCCESS",
+                         @"result":@""
+                         };
+[webView sendMessageToWeb:params];
+```
+
 ### 查询Provider信息步骤
 
 #### DApp发起查询Provider信息请求
