@@ -26,7 +26,9 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 分别实现认证和授权两个Action。
 
+<br><br>
 ### 认证certification
+<br><br>
 
 认证过程中需要钱包后台服务器签名，再发送认证信息给ONTPASS。
 
@@ -108,9 +110,11 @@ Success
 ```
 
 
-
+<br><br>
 
 ### 授权Authorization
+
+<br><br>
 
 用户在选择授权选项并点击确定按钮
 
