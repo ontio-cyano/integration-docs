@@ -8,7 +8,7 @@
 
 ## 认证和授权流程
 
-认证和授权页面由官方提供，钱包接入方需要提供服务器，服务器负责签名和与ONTPASS通信。
+认证和授权页面由官方提供，钱包接入方需要提供后台服务器，服务器负责签名和与ONTPASS通信。
 
 ### 认证certification
 
@@ -24,7 +24,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 ## 实现步骤
 
-分别实现认证和授权两个Action。
+钱包需要分别实现认证和授权两个Action。
 
 
 ### 认证certification
@@ -57,9 +57,6 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 
 ```
-Host：signature_service对应的URL
-Method：POST /HTTP/1.1
-Content-Type: application/json
 
 {
 	"action": "certification",
@@ -91,18 +88,18 @@ Method：POST /HTTP/1.1 Content-Type: application/json
     "action": "certification", 
     "error": 0, 
     "desc": "SUCCESS", 
-    "version": "1.0", 
+    "version": "1.0.0", 
     "result": true 
  }
 ```
 
 
-4. 响应DAPP请求
+4. 响应DAPP请求。**URI编码，Base64编码**后发送
 
-Success
 ```
 {
   "action": "certification",
+  "version": "1.0.0", 
   "error": 0,
   "desc": "SUCCESS",
   "result": true
@@ -117,19 +114,20 @@ Success
 用户在选择授权选项并点击确定按钮
 
 #### DAPP发送授权请求
+<br>
 
 数据如下，**URI编码，Base64编码**后DAPP发送请求：
 ```
 {
 	"action": "authorization",
-	"version": "v1.0.0",a
+	"version": "v1.0.0",
 	"params": {
-	    "seqno":"0001",
-        "user_ontid":"did:ont:Assxxxxxxxxxxxxx",
-        "app_ontid":"did:ont:Assxxxxxxxxxxxxx",
-        "to_ontid":"did:ont:Assxxxxxxxxxxxxx",
-        "redirect_uri":"http://candybox.com/",
-        "auth_templete":"authtemplate_kyc01"
+		"seqno": "0001",
+		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
+		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
+		"to_ontid": "did:ont:Assxxxxxxxxxxxxx",
+		"redirect_uri": "http://candybox.com/",
+		"auth_templete": "authtemplate_kyc01"
 	}
 }
 ```
@@ -146,26 +144,23 @@ Success
 
 
 ```
-Host：signature_service对应的URL
-Method：POST /HTTP/1.1
-Content-Type: application/json
 
 {
 	"action": "authorization",
 	"version": "v1.0.0",
 	"params": {
-	    "seqno":"0001",
-        "user_ontid":"did:ont:Assxxxxxxxxxxxxx",
-        "app_ontid":"did:ont:Assxxxxxxxxxxxxx",
-        "to_ontid":"did:ont:Assxxxxxxxxxxxxx",
-        "redirect_uri":"http://candybox.com/",
-        "auth_templete":"authtemplate_kyc01"
+		"seqno": "0001",
+		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
+		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
+		"to_ontid": "did:ont:Assxxxxxxxxxxxxx",
+		"redirect_uri": "http://candybox.com/",
+		"auth_templete": "authtemplate_kyc01"
 	}
 }
 ```
 1. 弹出密码框
 2. 用户输入密码，签名
-3. 返回签名给DAPP
+3. 返回签名给DAPP。**URI编码，Base64编码**后发送
 
 ```
 {
