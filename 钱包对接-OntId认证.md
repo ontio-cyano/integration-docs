@@ -6,6 +6,8 @@
 * 认证Certification
 * 授权Authorization
 
+## 认证和授权流程
+
 ### 认证certification
 
 ONT ID用户身份认证流程，认证过程中如果发现该ONTID没有注册到链上，会帮忙注册：
@@ -157,7 +159,6 @@ Content-Type: application/json
 2. 用户输入密码，签名
 3. 返回签名给DAPP
 
-Success
 ```
 {
   "action": "certification",
