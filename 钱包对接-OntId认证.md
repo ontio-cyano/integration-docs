@@ -62,24 +62,22 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	"action": "certification",
 	"version": "v1.0.0",
 	"params": {
-	    "url": "http://www.authorize.com/?id=wtgetyeyhewyey"
+	    "reqId": "http://www.authorize.com/?id=wtgetyeyhewyey"
 	}
 }
 ```
 1. 转发认证过的内容的地址给服务器
 2. 服务器获取认证内容，服务器签名
-3. 发送认证内容和签名给ONTPASS
+3. 服务器发送认证请求地址和签名给ONTPASS，ONTPASS处理认证请求
 
 ```
-Host：域名+/api/v1/ontta/ocr/authentication 
+Host：域名+/api/v1/ontta/ocr/certification 
 Method：POST /HTTP/1.1 Content-Type: application/json 
 
  RequestExample: 
  { 
     "action": "certification", 
-    "auth_id":"xxxxxxxxxxx", 
-    "auth_context":"xxxxxxxxxxxxxxxx", 
-    "ontpass_ontid":"didontA9Kn1v4zRzepHY344g2K1eiZqdskhnh2Jv", 
+    "reqId":"http://www.authorize.com/?id=wtgetyeyhewyey", 
     "signature":"AZMju/RtF5a594gR5VALto+nAQgk8mb41RT...isjt4wFKmkSMCRx3Mh0sk521jU5S4=" 
   } 
  
@@ -111,7 +109,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 
 <br>
 
-用户在选择授权选项并点击确定按钮
+用户在DAPP页面（如Candybox）点击授权  
 
 #### DAPP发送授权请求
 <br>
@@ -126,7 +124,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
 		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
 		"to_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"redirect_uri": "http://candybox.com/",
+		"callback": "http://candybox.com/",
 		"auth_templete": "authtemplate_kyc01"
 	}
 }
@@ -160,7 +158,22 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 ```
 1. 弹出密码框
 2. 用户输入密码，签名
-3. 返回签名给DAPP。**URI编码，Base64编码**后发送
+3. 转发数据给授权DAPP，DAPP到ONTPASS获取数据，展示授权页面
+
+4. 用户选择claim，点击授权，发送签名请求。
+
+```
+{
+  "action": "signMessage",
+  "error": 0,
+  "desc": "SUCCESS",
+  "result": {
+      "signature":"AXFqy6w/xg+IFQBRZvucKXvTuIZaIxOS0pesuBj1IKHvw56DaFwWogIcr1B9zQ13nUM0w5g30KHNNVCTo14lHF0="
+  }
+}
+```
+
+5. 返回签名给DAPP。**URI编码，Base64编码**后发送
 
 ```
 {
