@@ -54,7 +54,7 @@ DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.enc
 
 ## dAPI Provider SDK使用
 
-dAPI Provider SDK帮助Android webview和网页dapp之间通信。它对webview进行了一些方法的封装。分别支持Android、iOS：
+dAPI Provider SDK帮助Android webview和网页dapp之间通信。它对webview进行了一些方法的封装。分别支持Android、iOS，详细请参考：
 * [cyano-android-sdk](https://github.com/ontio-cyano/cyano-android-sdk)
 * [cyano-ios-sdk](https://github.com/ontio-cyano/cyano-ios-sdk)
 
@@ -69,24 +69,75 @@ cyanoWebView.loadUrl(url);
 cyanoWebView.getNativeJsBridge().setHandleGetAccount(new NativeJsBridge.HandleGetAccount() {
             @Override
             public void handleAction(String data) {
-             
+              /* TODO
+               * 1.发送钱包地址到webView
+               * com.alibaba.fastjson.JSONObject reqJson = JSON.parseObject(data);
+               * String action=reqJson.getString("action");
+               * String version=reqJson.getString("version");
+               * String id=reqJson.getString("id");
+               * cyanoWebView.sendSuccessToWeb(action,version, id, 钱包地址);
+               */             
             }
 	});
 	
 cyanoWebView.getNativeJsBridge().setHandleInvoke(new NativeJsBridge.HandleInvoke() {
             @Override
             public void handleAction(String data) {
-               
+              /* TODO
+               * 1.弹出密码输入框，解出钱包account，将data构建交易，对交易进行签名，预执行获取结果，注意耗时操作。
+               *
+               * 2.将预知行结果解析出Notify结果，显示手续费，如果结果中包含ONT,ONG合约地址，需显示转账金额和收款地址，
+               *
+               * 3.用户确认后发送交易到链上
+               *
+               * 4.发送交易hash到webView
+               * com.alibaba.fastjson.JSONObject reqJson = JSON.parseObject(data);
+               * String action=reqJson.getString("action");
+               * String version=reqJson.getString("version");
+               * String id=reqJson.getString("id");
+               * cyanoWebView.sendSuccessToWeb(action,version, id, 交易hash);
+               */               
             }
 	});	
 
 cyanoWebView.getNativeJsBridge().setHandleInvokeRead(new NativeJsBridge.HandleInvokeRead() {
         @Override
         public void handleAction(String data) {
-           
+               /* TODO
+                * 1.将data构建交易，预执行获取结果，注意耗时操作。
+                * 
+                * 2.发送预知行结果到webView
+                * com.alibaba.fastjson.JSONObject reqJson = JSON.parseObject(data);
+                * String action=reqJson.getString("action");
+                * String version=reqJson.getString("version");
+                * String id=reqJson.getString("id");
+                * cyanoWebView.sendSuccessToWeb(action,version, id, 预知行结果);
+                */          
         }
 });
+
     	
+cyanoWebView.getNativeJsBridge().setHandleInvokePasswordFree(new NativeJsBridge.HandleInvokePasswordFree() {
+        @Override
+        public void handleAction(String data, String message) {
+          /* TODO
+           * 1.第一次操作和action：Invoke相同，同时保存password和message
+           *
+           * 2.当第二次收到相同的message时候，将用保存的密码进行签名，预知行获取结果
+           *
+           * 3.预知行结果不用显示给用户确认
+           *
+           * 4.发送交易hash到webView
+           * com.alibaba.fastjson.JSONObject reqJson = JSON.parseObject(data);
+           * String action=reqJson.getString("action");
+           * String version=reqJson.getString("version");
+           * String id=reqJson.getString("id");
+           * cyanoWebView.sendSuccessToWeb(action,version, id, 交易hash);
+           */
+        }
+});    	
+
+
 //response	
 Map map = new HashMap<>();
 map.put("action", "");
@@ -96,13 +147,14 @@ map.put("result", message);
 cyanoWebView.sendBack(Base64.encodeToString(Uri.encode(JSON.toJSONString(map)).getBytes(), Base64.NO_WRAP));	
 ```
 
+iOS-sdk：
 
 ```
 RNJsWebView * webView = [[RNJsWebView alloc]initWithFrame:CGRectZero];
 [webView setURL:@""];
 ```
 
-iOS-sdk：
+
 
 ```
 
