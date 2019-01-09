@@ -39,6 +39,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 {
 	"action": "certification",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 	    "url": "http://www.authorize.com/?id=wtgetyeyhewyey"  //已认证的内容的地址
 	}
@@ -61,6 +62,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 {
 	"action": "certification",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 	    "reqId": "http://www.authorize.com/?id=wtgetyeyhewyey"
 	}
@@ -98,6 +100,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 {
   "action": "certification",
   "version": "1.0.0", 
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
   "error": 0,
   "desc": "SUCCESS",
   "result": true
@@ -119,6 +122,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 {
 	"action": "authorization",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 		"seqno": "0001",
 		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
@@ -146,6 +150,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 {
 	"action": "authorization",
 	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 		"seqno": "0001",
 		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
@@ -165,6 +170,8 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 ```
 {
   "action": "signMessage",
+  "version": "v1.0.0",  
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
   "error": 0,
   "desc": "SUCCESS",
   "result": {
@@ -178,6 +185,8 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 ```
 {
   "action": "certification",
+  "version": "v1.0.0",  
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
   "error": 0,
   "desc": "SUCCESS",
   "result": {
