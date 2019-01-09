@@ -41,7 +41,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-	    "url": "http://www.authorize.com/?id=wtgetyeyhewyey"  //已认证的内容的地址
+	    "reqId": "http://www.authorize.com/?id=wtgetyeyhewyey"  //已认证的内容的地址
 	}
 }
 ```
