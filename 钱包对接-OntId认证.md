@@ -3,14 +3,15 @@
 本协议将帮助您的应用实现ONT ID创建、认证、管理、授权。
 
 目前已支持的功能：
-* 认证Certification
+* 认证uthentication
 * 授权Authorization
+* 解密消息decryptMessage
 
 ## 认证和授权流程
 
 认证和授权页面由官方提供，钱包接入方需要提供后台服务器，服务器负责签名和与ONTPASS通信。
 
-### 认证certification
+### 认证Authentication
 
 ONT ID用户身份认证流程，认证过程中如果发现该ONTID没有注册到链上，会帮忙注册：
 
@@ -27,7 +28,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 钱包需要分别实现认证和授权两个Action。
 
 
-### 认证certification
+### 认证Authentication
 <br>
 
 认证过程中需要钱包后台服务器签名，再发送认证信息给ONTPASS。
@@ -37,11 +38,11 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 数据如下，**URI编码，Base64编码**后DAPP发送请求：
 ```
 {
-	"action": "certification",
+	"action": "authentication",
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-	    "reqId": "http://www.authorize.com/?id=wtgetyeyhewyey"  //已认证的内容的地址
+	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"  //已认证的内容的地址
 	}
 }
 ```
@@ -60,11 +61,11 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 ```
 
 {
-	"action": "certification",
+	"action": "authentication",
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-	    "reqId": "http://www.authorize.com/?id=wtgetyeyhewyey"
+	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"
 	}
 }
 ```
@@ -73,11 +74,11 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 ```
 
 {
-	"action": "certification",
+	"action": "authentication",
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-	    "reqId": "http://www.authorize.com/?id=wtgetyeyhewyey",
+	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey",
 	    "registryOntidTx": "00d1fad4f3b3f40100000............e7493fa52c01f9c6f65ac"
 	}
 }
@@ -92,14 +93,14 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 
  RequestExample: 
  { 
-    "action": "certification", 
+    "action": "authentication", 
     "reqId":"http://www.authorize.com/?id=wtgetyeyhewyey", 
     "signature":"AZMju/RtF5a594gR5VALto+nAQgk8mb41RT...isjt4wFKmkSMCRx3Mh0sk521jU5S4=" 
   } 
  
  SuccessResponse： 
  { 
-    "action": "certification", 
+    "action": "authentication", 
     "error": 0, 
     "desc": "SUCCESS", 
     "version": "1.0.0", 
@@ -112,7 +113,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 
 ```
 {
-  "action": "certification",
+  "action": "authentication",
   "version": "1.0.0", 
   "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
   "error": 0,
@@ -175,36 +176,35 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 	}
 }
 ```
-1. 弹出密码框
-2. 用户输入密码，签名
-3. 转发数据给授权DAPP，DAPP到ONTPASS获取数据，展示授权页面
 
-4. 用户选择claim，点击授权，发送签名请求。
+1. 转发数据给授权DAPP，DAPP到ONTPASS获取数据，展示授权页面
+
+2. 用户选择claim，点击授权，发送解密请求。
 
 ```
 {
-  "action": "signMessage",
+  "action": "decryptMessage",
   "version": "v1.0.0",  
   "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
   "error": 0,
   "desc": "SUCCESS",
   "result": {
-      "signature":"AXFqy6w/xg+IFQBRZvucKXvTuIZaIxOS0pesuBj1IKHvw56DaFwWogIcr1B9zQ13nUM0w5g30KHNNVCTo14lHF0="
+      "message":"AXFqy6w/xg+IFQBRZvucKXvTuIZaIxOS0pesuBj1IKHvw56DaFwWogIcr1B9zQ13nUM0w5g30KHNNVCTo14lHF0="
   }
 }
 ```
 
-5. 返回签名给DAPP。**URI编码，Base64编码**后发送
+5. 弹出密码框，用户输入密码，解密消息，返回消息原文给DAPP的后台callback地址。**URI编码，Base64编码**后发送
 
 ```
 {
-  "action": "certification",
+  "action": "authorization",
   "version": "v1.0.0",  
   "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
   "error": 0,
   "desc": "SUCCESS",
   "result": {
-      "signature":"AXFqy6w/xg+IFQBRZvucKXvTuIZaIxOS0pesuBj1IKHvw56DaFwWogIcr1B9zQ13nUM0w5g30KHNNVCTo14lHF0="
+      "message":"hello world"
   }
 }
 ```
