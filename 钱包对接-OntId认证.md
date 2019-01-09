@@ -3,7 +3,7 @@
 本协议将帮助您的应用实现ONT ID创建、认证、管理、授权。
 
 目前已支持的功能：
-* 认证uthentication
+* 认证uthentication(人脸识别和提交认证)
 * 授权Authorization
 * 解密消息decryptMessage
 
@@ -28,12 +28,12 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 钱包需要分别实现认证和授权两个Action。
 
 
-### 认证Authentication
+### 人脸识别
 <br>
 
-认证过程中需要钱包后台服务器签名，再发送认证信息给ONTPASS。
+认证过程中需要钱包后台服务器签名，再发送认证信息给ONTPASS。如果需要人脸识别，请求打开原生做人脸识别。
 
-#### DAPP发送认证请求
+#### DAPP发送人脸识别请求
 
 数据如下，**URI编码，Base64编码**后DAPP发送请求：
 ```
@@ -42,7 +42,40 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"  //已认证的内容的地址
+	    "subaction": "faceRecognition"
+	}
+}
+```
+#### DAPP发送人脸识别请求
+钱包先**URI解码，Base64解码**后得到：
+
+
+```
+
+{
+	"action": "authentication",
+	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
+	"result": {
+	    "subaction": "faceRecognition", 
+	    "data": ""
+	}
+}
+```
+
+### 提交认证
+
+#### DAPP发送提交认证请求
+
+数据如下，**URI编码，Base64编码**后DAPP发送请求：
+```
+{
+	"action": "authentication",
+	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
+	"params": {
+	    "subaction": "submit", 
+	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"  //认证的内容存放的地址
 	}
 }
 ```
@@ -53,7 +86,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 | params | string | 方法要求的参数 |
 
 
-#### 钱包处理认证请求
+#### 钱包处理提交认证请求
 
 钱包先**URI解码，Base64解码**后得到：
 
@@ -65,11 +98,12 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
+	    "subaction": "submit", 
 	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"
 	}
 }
 ```
-1. 转发认证过的内容的地址给服务器
+1. 转发认证的内容的地址、构造ontid注册交易给服务器
 
 ```
 
@@ -78,6 +112,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
+	    "subaction": "submit", 
 	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey",
 	    "registryOntidTx": "00d1fad4f3b3f40100000............e7493fa52c01f9c6f65ac"
 	}
@@ -94,7 +129,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
  RequestExample: 
  { 
     "action": "authentication", 
-    "reqId":"http://www.authorize.com/?id=wtgetyeyhewyey", 
+    "authenticationId":"http://www.authorize.com/?id=wtgetyeyhewyey", 
     "signature":"AZMju/RtF5a594gR5VALto+nAQgk8mb41RT...isjt4wFKmkSMCRx3Mh0sk521jU5S4=" 
   } 
  
