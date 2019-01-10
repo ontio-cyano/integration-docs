@@ -218,12 +218,11 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 
 ```
 {
-  "action": "decryptMessage",
+  "action": "authorization",
   "version": "v1.0.0",  
   "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
-  "error": 0,
-  "desc": "SUCCESS",
-  "result": {
+  "params": {
+      "subaction": "decryptClaim",
       "message":"AXFqy6w/xg+IFQBRZvucKXvTuIZaIxOS0pesuBj1IKHvw56DaFwWogIcr1B9zQ13nUM0w5g30KHNNVCTo14lHF0="
   }
 }
