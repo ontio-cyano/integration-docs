@@ -5,7 +5,6 @@
 目前已支持的功能：
 * 认证Authentication(人脸识别和提交认证)
 * 授权Authorization
-* 解密消息decryptMessage
 
 ## 认证和授权流程
 
@@ -214,7 +213,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 
 1. 转发数据给授权DAPP，DAPP到ONTPASS获取数据，展示授权页面
 
-2. 用户选择claim，点击授权，发送解密请求。
+2. 用户点击授权，发送解密请求。
 
 ```
 {
