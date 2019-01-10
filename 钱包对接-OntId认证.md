@@ -3,7 +3,7 @@
 本协议将帮助您的应用实现ONT ID创建、认证、管理、授权。
 
 目前已支持的功能：
-* 认证uthentication(人脸识别和提交认证)
+* 认证Authentication(人脸识别和提交认证)
 * 授权Authorization
 * 解密消息decryptMessage
 
