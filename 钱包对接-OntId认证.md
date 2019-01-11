@@ -138,7 +138,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	}
 }
 ```
-1. 转发认证的内容的地址、构造ontid注册交易给服务器
+1. 转发认证的内容的地址给服务器
 
 ```
 
@@ -148,8 +148,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 	    "subaction": "submit", 
-	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey",
-	    "registryOntidTx": "00d1fad4f3b3f40100000............e7493fa52c01f9c6f65ac"
+	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"
 	}
 }
 ```
@@ -165,6 +164,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
  { 
     "action": "authentication", 
     "authenticationId":"http://www.authorize.com/?id=wtgetyeyhewyey", 
+    "ontid":"did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ",
     "signature":"AZMju/RtF5a594gR5VALto+nAQgk8mb41RT...isjt4wFKmkSMCRx3Mh0sk521jU5S4=" 
   } 
  
