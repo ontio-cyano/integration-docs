@@ -231,12 +231,12 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 
 
 ```
-
 {
 	"action": "authorization",
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
+	    "subaction": "requestAuthorization"
 		"seqno": "0001",
 		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
 		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
@@ -247,9 +247,24 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 }
 ```
 
-1. 转发数据给授权DAPP，DAPP到ONTPASS获取数据，展示授权页面
+1. 钱包临时保存该数据，打开授权DAPP，授权DAPP发送：
 
-2. 用户点击授权，发送解密请求。
+```
+
+{
+	"action": "authorization",
+	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
+	"params": {
+		"subaction": "getAuthorizationInfo"
+	}
+}
+```
+2. 钱包返回给授权DAPP请求内容，钱包返回DAPP已打开授权DAPP。
+
+3. 授权DAPP到ONTPASS获取数据，展示授权页面
+
+4. 用户点击授权，发送解密请求。
 
 ```
 {
@@ -263,7 +278,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 }
 ```
 
-5. 弹出密码框，用户输入密码，解密消息，返回消息原文给DAPP的后台callback地址。**URI编码，Base64编码**后发送
+5. 弹出密码框，用户输入密码，解密消息，返回消息原文给DAPP（candybox）的后台callback地址。**URI编码，Base64编码**后发送
 
 ```
 {
@@ -275,5 +290,18 @@ Method：POST /HTTP/1.1 Content-Type: application/json
   "result": {
       "message":"hello world"
   }
+}
+```
+
+6. 返回成功给给授权DAPP。
+
+```
+{
+  "action": "authentication",
+  "version": "1.0.0", 
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
+  "error": 0,
+  "desc": "SUCCESS",
+  "result": true
 }
 ```
