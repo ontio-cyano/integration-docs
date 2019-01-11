@@ -3,7 +3,7 @@
 本协议将帮助您的应用实现ONT ID创建、认证、管理、授权。
 
 目前已支持的功能：
-* 认证Authentication(人脸识别和提交认证)
+* 认证Authentication(注册ontid，人脸识别和提交认证)
 * 授权Authorization
 
 ## 认证和授权流程
@@ -27,6 +27,41 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 钱包需要分别实现认证和授权两个Action。
 
 
+### 获取注册ontid交易
+<br>
+
+认证过程中需要钱包后台服务器签名，再发送认证信息给ONTPASS。如果需要人脸识别，请求打开原生做人脸识别。
+
+#### 获取注册ontid交易请求
+
+数据如下，**URI编码，Base64编码**后DAPP发送请求：
+```
+{
+	"action": "authentication",
+	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
+	"params": {
+	    "subaction": "getRegistryOntidTx"
+	}
+}
+```
+#### 获取注册ontid交易的请求处理
+钱包先**URI解码，Base64解码**后得到：
+
+
+```
+
+{
+	"action": "authentication",
+	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
+	"result": {
+	    "subaction": "getRegistryOntidTx", 
+	    "registryOntidTx": "00d1fad4f3b3f40100000............e7493fa52c01f9c6f65ac"
+	}
+}
+```
+
 ### 人脸识别
 <br>
 
@@ -45,7 +80,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	}
 }
 ```
-#### DAPP发送人脸识别请求
+#### DAPP发送人脸识别请求处理
 钱包先**URI解码，Base64解码**后得到：
 
 
