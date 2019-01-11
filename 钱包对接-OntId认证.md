@@ -57,6 +57,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"result": {
 	    "subaction": "getRegistryOntidTx", 
+	    "ontid":"did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ",
 	    "registryOntidTx": "00d1fad4f3b3f40100000............e7493fa52c01f9c6f65ac"
 	}
 }
