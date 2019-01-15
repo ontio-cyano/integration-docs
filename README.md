@@ -5,9 +5,9 @@
 * [钱包对接-扫码接入流程](钱包对接-扫码.md)
 * [钱包对接-钱包打开DApp接入流程](钱包对接-钱包打开DApp.md)
 * [钱包对接-唤醒接入流程](钱包对接-唤醒.md)
-* [DAPP对接-钱包打开DAPP](DAPP对接-钱包打开DAPP.md)
-* [DAPP对接-扫码](DAPP对接-扫码.md)
-
+* [DAPP对接-手机钱包打开DAPP](DAPP对接-手机钱包打开DAPP.md)
+* [DAPP对接-手机钱包扫码](DAPP对接-手机钱包扫码.md)
+* [DAPP对接-chrome插件钱包](DAPP对接-chrome插件钱包.md)
 
 
 ## 场景1和2： 唤醒、扫码场景
