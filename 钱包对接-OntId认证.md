@@ -295,6 +295,18 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 }
 ```
 
+callback 接收消息格式：
+
+```
+{
+  "action": "authorization",
+  "version": "v1.0.0",  
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
+  "params": {
+  }
+}
+```
+
 6. 返回成功给给授权DAPP。
 
 ```
