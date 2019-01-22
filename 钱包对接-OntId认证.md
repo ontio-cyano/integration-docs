@@ -215,7 +215,8 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
 		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
 		"to_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"callback": "http://candybox.com/",
+		"callback": "http://candybox.com/callback",
+		"dappUrl": "http://candybox.com/",
 		"auth_templete": "authtemplate_kyc01"
 	}
 }
@@ -243,7 +244,8 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
 		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
 		"to_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"callback": "http://candybox.com/",
+		"callback": "http://candybox.com/callback",
+		"dappUrl": "http://candybox.com/",
 		"auth_templete": "authtemplate_kyc01"
 	}
 }
