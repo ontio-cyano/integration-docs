@@ -280,12 +280,13 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 }
 ```
 
-5. 弹出密码框，用户输入密码，解密消息，返回消息原文给DAPP（candybox）的后台callback地址。**URI编码，Base64编码**后发送
+
+5. 弹出密码框，用户输入密码，解密消息，返回消息原文给授权DAPP。
 
 ```
 {
-  "action": "authorization",
-  "version": "v1.0.0",  
+  "action": "authentication",
+  "version": "1.0.0", 
   "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
   "error": 0,
   "desc": "SUCCESS",
@@ -295,6 +296,9 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 }
 ```
 
+6. 授权DAPP发送原文给DAPP（candybox）的后台callback地址。
+
+
 callback 接收消息格式：
 
 ```
@@ -303,24 +307,10 @@ callback 接收消息格式：
   "version": "v1.0.0",  
   "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
   "params": {
+      "message":"hello world"
   }
 }
 ```
-
-6. 返回成功给给授权DAPP。
-
-```
-{
-  "action": "authentication",
-  "version": "1.0.0", 
-  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
-  "error": 0,
-  "desc": "SUCCESS",
-  "result": true
-}
-```
-
-
 
 ### ontid管理
 
