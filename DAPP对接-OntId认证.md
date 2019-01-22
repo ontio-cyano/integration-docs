@@ -5,6 +5,7 @@
 目前已支持的功能：
 * 认证Authentication(注册ontid，人脸识别和提交认证)
 * 授权Authorization
+* ontid管理
 
 ## 认证和授权流程
 
