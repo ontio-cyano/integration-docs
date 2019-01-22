@@ -123,64 +123,9 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 #### 钱包处理提交认证请求
 
-钱包先**URI解码，Base64解码**后得到：
 
-
-```
-
-{
-	"action": "authentication",
-	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
-	"params": {
-	    "subaction": "submit", 
-	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"
-	}
-}
-```
-
-1. 转发认证的内容的地址给服务器
-
-```
-
-{
-	"action": "authentication",
-	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
-	"params": {
-	    "subaction": "submit", 
-	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"
-	}
-}
-```
-	    
-2. 服务器获取认证内容，服务器签名
-3. 服务器发送认证请求地址和签名给ONTPASS，ONTPASS处理认证请求
-
-```
-Host：域名+/api/v1/ontta/ocr/certification 
-Method：POST /HTTP/1.1 Content-Type: application/json 
-
- RequestExample: 
- { 
-    "action": "authentication", 
-    "authenticationId":"http://www.authorize.com/?id=wtgetyeyhewyey", 
-    "ontid":"did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ",
-    "signature":"AZMju/RtF5a594gR5VALto+nAQgk8mb41RT...isjt4wFKmkSMCRx3Mh0sk521jU5S4=" 
-  } 
- 
- SuccessResponse： 
- { 
-    "action": "authentication", 
-    "error": 0, 
-    "desc": "SUCCESS", 
-    "version": "1.0.0", 
-    "result": true 
- }
-```
-
-
-4. 响应DAPP请求。**URI编码，Base64编码**后发送
+1. 钱包处理提交认证请求
+2. 响应DAPP请求。**URI编码，Base64编码**后发送
 
 ```
 {
@@ -228,73 +173,9 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 
 #### 钱包处理认证请求
 
-钱包先**URI解码，Base64解码**后得到：
 
-
-```
-{
-	"action": "authorization",
-	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
-	"params": {
-	    "subaction": "requestAuthorization"
-		"seqno": "0001",
-		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"to_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"callback": "http://candybox.com/",
-		"auth_templete": "authtemplate_kyc01"
-	}
-}
-```
-
-1. 钱包临时保存该数据，打开授权DAPP，授权DAPP发送：
-
-```
-
-{
-	"action": "authorization",
-	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
-	"params": {
-		"subaction": "getAuthorizationInfo"
-	}
-}
-```
-2. 钱包返回给授权DAPP请求内容，钱包返回DAPP已打开授权DAPP。
-
-3. 授权DAPP到ONTPASS获取数据，展示授权页面
-
-4. 用户点击授权，发送解密请求。
-
-```
-{
-  "action": "authorization",
-  "version": "v1.0.0",  
-  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
-  "params": {
-      "subaction": "decryptClaim",
-      "message":"AXFqy6w/xg+IFQBRZvucKXvTuIZaIxOS0pesuBj1IKHvw56DaFwWogIcr1B9zQ13nUM0w5g30KHNNVCTo14lHF0="
-  }
-}
-```
-
-5. 弹出密码框，用户输入密码，解密消息，返回消息原文给DAPP（candybox）的后台callback地址。**URI编码，Base64编码**后发送
-
-```
-{
-  "action": "authorization",
-  "version": "v1.0.0",  
-  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
-  "error": 0,
-  "desc": "SUCCESS",
-  "result": {
-      "message":"hello world"
-  }
-}
-```
-
-6. 返回成功给给授权DAPP。
+1. 钱包处理认证请求
+2. 返回成功给给授权DAPP。
 
 ```
 {
@@ -306,7 +187,6 @@ Method：POST /HTTP/1.1 Content-Type: application/json
   "result": true
 }
 ```
-
 
 
 ### ontid管理
