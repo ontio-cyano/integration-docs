@@ -1,11 +1,10 @@
 ## OntId认证和授权
 
-本协议将帮助您的应用实现ONT ID创建、认证、管理、授权。
+本协议将帮助您的应用实现ONT ID认证、授权，典型的应用之一是CandyBox。
 
 目前已支持的功能：
 * 认证Authentication(注册ontid，人脸识别和提交认证)
 * 授权Authorization
-* ontid管理
 
 ## 认证和授权流程
 
@@ -64,40 +63,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 }
 ```
 
-### 人脸识别
-<br>
 
-认证过程中需要钱包后台服务器签名，再发送认证信息给ONTPASS。如果需要人脸识别，请求打开原生做人脸识别。
-
-#### DAPP发送人脸识别请求
-
-数据如下，**URI编码，Base64编码**后DAPP发送请求：
-```
-{
-	"action": "authentication",
-	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
-	"params": {
-	    "subaction": "faceRecognition"
-	}
-}
-```
-#### DAPP发送人脸识别请求处理
-钱包先**URI解码，Base64解码**后，处理完action返回：
-
-
-```
-
-{
-	"action": "authentication",
-	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
-	"result": {
-	    "subaction": "faceRecognition", 
-	    "data": ""
-	}
-}
-```
 
 ### 提交认证
 
@@ -176,23 +142,9 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 
 1. 钱包处理认证请求
-2. 返回成功给给授权DAPP。
+2. 授权DAPP发送原文给CandyBox后台。
 
-```
-{
-  "action": "authentication",
-  "version": "1.0.0", 
-  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
-  "error": 0,
-  "desc": "SUCCESS",
-  "result": true
-}
-```
-
-
-### ontid管理
-
-删除ontid
+DAPP后台接受 callback 接收消息格式：
 
 ```
 {
@@ -200,20 +152,10 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
   "version": "v1.0.0",  
   "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
   "params": {
-      "subaction": "deleteOntid"
+      "message":"hello world"
   }
 }
 ```
 
-导出ontid
 
-```
-{
-  "action": "authorization",
-  "version": "v1.0.0",  
-  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
-  "params": {
-      "subaction": "exportOntid"
-  }
-}
-```
+
