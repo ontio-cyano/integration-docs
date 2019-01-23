@@ -3,8 +3,8 @@
 本协议将帮助您的应用实现ONT ID认证、授权，典型的应用之一是CandyBox。
 
 目前已支持的功能：
-* 认证Authentication(注册ontid，人脸识别和提交认证)
-* 授权Authorization
+* 认证Authentication(请求认证，人脸识别和提交认证)
+* 授权Authorization（请求授权）
 
 ## 认证和授权流程
 
