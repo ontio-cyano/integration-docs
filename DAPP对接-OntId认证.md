@@ -27,12 +27,12 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 钱包需要分别实现认证和授权两个Action。
 
 
-### 获取注册ontid交易
+### CandyBox请求认证
 <br>
 
 认证时需要注册ontid，打开认证页面时，向钱包请求注册ontid交易的hex数据。
 
-#### 获取注册ontid交易请求
+#### CandyBox请求认证
 
 数据如下，**URI编码，Base64编码**后DAPP发送请求：
 ```
@@ -41,11 +41,11 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-	    "subaction": "getRegistryOntidTx"
+	    "subaction": "requestAuthentication
 	}
 }
 ```
-#### 获取注册ontid交易的请求处理
+#### CandyBox请求认证处理
 钱包先**URI解码，Base64解码**后，处理完返回：
 
 
@@ -55,11 +55,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 	"action": "authentication",
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
-	"result": {
-	    "subaction": "getRegistryOntidTx", 
-	    "ontid":"did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ",
-	    "registryOntidTx": "00d1fad4f3b3f40100000............e7493fa52c01f9c6f65ac"
-	}
+	"result": true
 }
 ```
 
