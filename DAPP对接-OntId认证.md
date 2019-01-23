@@ -24,7 +24,16 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 ## 实现步骤
 
-钱包需要分别实现认证和授权两个Action。
+认证：
+
+1. CandyBox发送认证请求。
+2. 钱包处理请求，打开认证DAPP。
+
+授权：
+
+1. CandyBox发送授权请求
+2. 钱包处理请求
+
 
 
 ### CandyBox请求认证
@@ -59,47 +68,6 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 }
 ```
 
-
-
-### 提交认证
-
-#### DAPP发送提交认证请求
-
-数据如下，**URI编码，Base64编码**后DAPP发送请求：
-```
-{
-	"action": "authentication",
-	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
-	"params": {
-	    "subaction": "submit", 
-	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"  //认证的内容存放的地址
-	}
-}
-```
-
-|字段|类型|定义|
-| :---| :---| :---|
-| action | string | 操作类型|
-| params | string | 方法要求的参数 |
-
-
-#### 钱包处理提交认证请求
-
-
-1. 钱包处理提交认证请求
-2. 响应DAPP请求。**URI编码，Base64编码**后发送
-
-```
-{
-  "action": "authentication",
-  "version": "1.0.0", 
-  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	  
-  "error": 0,
-  "desc": "SUCCESS",
-  "result": true
-}
-```
 
 
 ### 授权Authorization
