@@ -141,7 +141,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 }
 ```
 
-1. 转发认证的内容的地址给服务器
+1. 转发认证的内容的地址给钱包服务器
 
 ```
 
@@ -156,11 +156,11 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 }
 ```
 	    
-2. 服务器获取认证内容，服务器签名
-3. 服务器发送认证请求地址和签名给ONTPASS，ONTPASS处理认证请求
+2. 钱包服务器获取认证内容，服务器签名
+3. 钱包服务器发送认证请求地址和签名给ONTPASS，ONTPASS处理认证请求并返回认证结果。钱包服务器返回认证结果给钱包。
 
 ```
-Host：域名+/api/v1/ontta/ocr/certification 
+Host：域名+/api/v1/authentication/submit
 Method：POST /HTTP/1.1 Content-Type: application/json 
 
  RequestExample: 
@@ -182,7 +182,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 ```
 
 
-4. 响应CandyBox请求。**URI编码，Base64编码**后发送
+4. 钱包响应CandyBox请求。**URI编码，Base64编码**后发送
 
 ```
 {
