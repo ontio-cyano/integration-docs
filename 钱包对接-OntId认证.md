@@ -36,7 +36,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 #### 获取注册ontid交易请求
 
-数据如下，**URI编码，Base64编码**后DAPP发送请求：
+数据如下，**URI编码，Base64编码**后CandyBox发送请求：
 ```
 {
 	"action": "authentication",
@@ -104,7 +104,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 #### DAPP发送提交认证请求
 
-数据如下，**URI编码，Base64编码**后DAPP发送请求：
+数据如下，**URI编码，Base64编码**后CandyBox发送请求：
 ```
 {
 	"action": "authentication",
@@ -182,7 +182,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 ```
 
 
-4. 响应DAPP请求。**URI编码，Base64编码**后发送
+4. 响应CandyBox请求。**URI编码，Base64编码**后发送
 
 ```
 {
@@ -200,12 +200,12 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 
 <br>
 
-用户在DAPP页面（如Candybox）点击授权  
+用户在CandyBox页面（如Candybox）点击授权  
 
 #### DAPP发送授权请求
 <br>
 
-数据如下，**URI编码，Base64编码**后DAPP发送请求：
+数据如下，**URI编码，Base64编码**后CandyBox发送请求：
 ```
 {
 	"action": "authorization",
@@ -213,13 +213,13 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 	    "subaction": "requestAuthorization"
-        "seqno": "0001",
-		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		“app_name” ：‘’“candy box”,
+        "seqNo": "0001",
+		"userOntid": "did:ont:Assxxxxxxxxxxxxx",
+		"dappOntid": "did:ont:Assxxxxxxxxxxxxx",
+		"dappName": "candy box",
 		"callback": "http://candybox.com/callback",
 		"dappUrl": "http://candybox.com/",
-		"auth_templete": "authtemplate_kyc01"
+		"authTemplate": "authtemplate_kyc01"
 	}
 }
 ```
@@ -242,13 +242,13 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 	    "subaction": "requestAuthorization"
-        "seqno": "0001",
-		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		“app_name” ：‘’“candy box”,
+        "seqNo": "0001",
+		"userOntid": "did:ont:Assxxxxxxxxxxxxx",
+		"dappOntid": "did:ont:Assxxxxxxxxxxxxx",
+		"dappName": "candy box",
 		"callback": "http://candybox.com/callback",
 		"dappUrl": "http://candybox.com/",
-		"auth_templete": "authtemplate_kyc01"
+		"authTemplate": "authtemplate_kyc01"
 	}
 }
 ```
@@ -266,7 +266,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 	}
 }
 ```
-2. 钱包返回给授权DAPP请求内容，钱包返回DAPP已打开授权DAPP。
+2. 钱包返回给授权DAPP请求内容，钱包返回CandyBox已打开授权DAPP。
 
 3. 授权DAPP到ONTPASS获取数据，展示授权页面
 
@@ -300,7 +300,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 }
 ```
 
-6. 授权DAPP发送原文给DAPP（candybox）的后台callback地址。
+6. 授权DAPP发送原文给CandyBox的后台callback地址。
 
 
 callback 接收消息格式：

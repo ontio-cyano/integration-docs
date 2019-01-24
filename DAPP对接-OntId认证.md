@@ -88,12 +88,12 @@ getIdentity：
 
 <br>
 
-用户在DAPP页面（如Candybox）点击授权  
+用户在CandyBox页面点击授权  
 
-#### DAPP发送授权请求
+#### CandyBox发送授权请求
 <br>
 
-数据如下，**URI编码，Base64编码**后DAPP发送请求：
+数据如下，**URI编码，Base64编码**后CandyBox发送请求：
 ```
 {
 	"action": "authorization",
@@ -101,13 +101,13 @@ getIdentity：
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 	    "subaction": "requestAuthorization"
-        "seqno": "0001",
-		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		“app_name” ：‘’“candy box”,
+        "seqNo": "0001",
+		"userOntid": "did:ont:Assxxxxxxxxxxxxx",
+		"dappOntid": "did:ont:Assxxxxxxxxxxxxx",
+		"dappName": "candy box",
 		"callback": "http://candybox.com/callback",
 		"dappUrl": "http://candybox.com/",
-		"auth_templete": "authtemplate_kyc01"
+		"authTemplate": "authtemplate_kyc01"
 	}
 }
 ```
@@ -124,7 +124,7 @@ getIdentity：
 1. 钱包处理认证请求
 2. 授权DAPP发送原文给CandyBox后台。
 
-DAPP后台接受 callback 接收消息格式：
+CandyBox后台接受 callback 接收消息格式：
 
 ```
 {
