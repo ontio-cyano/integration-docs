@@ -212,10 +212,11 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-		"seqno": "0001",
+	    "subaction": "requestAuthorization"
+        "seqno": "0001",
 		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
 		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"to_ontid": "did:ont:Assxxxxxxxxxxxxx",
+		“app_name” ：‘’“candy box”,
 		"callback": "http://candybox.com/callback",
 		"dappUrl": "http://candybox.com/",
 		"auth_templete": "authtemplate_kyc01"
@@ -241,10 +242,10 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 	    "subaction": "requestAuthorization"
-		"seqno": "0001",
+        "seqno": "0001",
 		"user_ontid": "did:ont:Assxxxxxxxxxxxxx",
 		"app_ontid": "did:ont:Assxxxxxxxxxxxxx",
-		"to_ontid": "did:ont:Assxxxxxxxxxxxxx",
+		“app_name” ：‘’“candy box”,
 		"callback": "http://candybox.com/callback",
 		"dappUrl": "http://candybox.com/",
 		"auth_templete": "authtemplate_kyc01"
