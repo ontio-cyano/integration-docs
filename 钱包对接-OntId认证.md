@@ -6,6 +6,7 @@
 * 认证Authentication(注册ontid，人脸识别和提交认证)
 * 授权Authorization
 * ontid管理
+* 服务器
 
 ## 认证和授权流程
 
@@ -341,3 +342,26 @@ callback 接收消息格式：
   }
 }
 ```
+
+
+### 钱包方服务器接口
+
+#### 提交认证
+
+1. 认证DAPP提交认证
+
+```
+
+{
+	"action": "authentication",
+	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
+	"params": {
+	    "subaction": "submit", 
+	    "authenticationId": "http://www.authorize.com/?id=wtgetyeyhewyey"
+	}
+}
+```
+2. 服务器获取认证内容，服务器签名
+3. 服务器发送认证请求地址和签名给ONTPASS
+

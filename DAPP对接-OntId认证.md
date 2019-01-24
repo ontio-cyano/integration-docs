@@ -2,9 +2,10 @@
 
 本协议将帮助您的应用实现ONT ID认证、授权，典型的应用之一是CandyBox。
 
-目前已支持的功能：
+支持的功能：
 * getIdentity
 * 授权Authorization（请求授权）
+* CandyBox服务器接口
 
 ## getIdentity和授权流程
 
@@ -147,3 +148,19 @@ DAPP后台接受 callback 接收消息格式：
 }
 ```
 
+
+### CandyBox服务器接口
+
+
+callback 接收claim原文：
+
+```
+{
+  "action": "authorization",
+  "version": "v1.0.0",  
+  "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	 
+  "params": {
+      "message":"hello world"
+  }
+}
+```
