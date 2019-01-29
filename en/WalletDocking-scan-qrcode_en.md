@@ -12,7 +12,7 @@ Participants involved in the process include:
 
 ## Interactive process description
 
-![login-invoke](images/split-login-invoke.png)
+![login-invoke](../images/split-login-invoke.png)
 
 ### Login
 - 1.1 Provider scan the QRcode provided by DApp developer [Standard of login QRcode](#standard-of-login-qrcode)

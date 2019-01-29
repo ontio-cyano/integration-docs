@@ -13,7 +13,7 @@ Participants involved in the process include:
 
 URI scheme for DApp to request data：```ontprovider://ont.io?param=Base64.encode(Uri.encode({the json data}.toString()))```
 
-![login-invoke](images/scenario3.png)
+![login-invoke](../images/scenario3.png)
 
 ### Wallet opens a H5 dApp
 
