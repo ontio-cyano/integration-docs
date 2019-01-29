@@ -1,5 +1,4 @@
 <h1 align="center">Wallet Docking - the Docking Process for Scanning QRcode</h1>
-<p align="center" class="version">Version 0.8.0 </p>
 
 ## Overview
 

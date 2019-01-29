@@ -1,5 +1,5 @@
 <h1 align="center">DApp Docking - Wallet Opens DApp</h1>
-<p align="center" class="version">Version 1.0.0 </p>
+
 
 ## The difference between the dApi of mobile version and the dApi of chrome extension
 
