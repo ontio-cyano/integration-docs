@@ -1,5 +1,13 @@
 <h1 align="center">Wallet Docking - The Docking Process for Wallet to Open DApp</h1>
 
++ [Overview](#Overview)
++ [Interactive process description](#Interactive-process-description)
++ [Docking process](#Docking-process)
+   + [Querying account or identity](#The-procedure-for-querying-account-or-identity)
+   + [Login process](#Login-process)
+   + [Invoking a contract](#The-procedure-for-invoking-a-contract)
++ [Code reference](#Code-reference)
+
 ## Overview
 
 This article is used to instruct dApp developer how to communicate with wallet and how wallet deals with the requests from dApp.
@@ -39,15 +47,15 @@ URI scheme for DApp to request data：```ontprovider://ont.io?param=Base64.encod
 
 
 ### Invoke a smart contract
-- 1 DApp requests for invoking smart contracts（[DApp requests invoking a smart contract](#dapp-requests-invoking-a-smart-contract)）
-- 2 Wallet builds a transaction and user signs it
-- 3 Wallet pre-executes the transaction（[Pre-execute transaction](#pre-execute-transaction)）   
-- 4 Wallet sends transaction
-- 5 Wallet returns the transaction hash（[Wallet responds to contract request](#wallet-responds-to-contract-request)）
+1. DApp requests for invoking smart contracts（[DApp requests invoking a smart contract](#dapp-requests-invoking-a-smart-contract)）
+2. Wallet builds a transaction and user signs it
+3. Wallet pre-executes the transaction（[Pre-execute transaction](#pre-execute-transaction)）   
+4. Wallet sends transaction
+5. Wallet returns the transaction hash（[Wallet responds to contract request](#wallet-responds-to-contract-request)）
 
 
 
-## The docking process for wallet and DApp
+## Docking process
 
 ### Prerequisite
 Before using it，you need to contact [the Ontology cooperation](https://info.ont.io/cooperation/en)
@@ -345,7 +353,7 @@ The data is as follows. Sending request after **URI encoding，Base64 encoding**
 
 ##### Pre-execute transaction
 
-Pre-executing a transaction is optional. The purpose is that reminding users the ONT/ONG transfer amount spent in this transaction. You need to connect to the fixed node to pre-execute before returning Notify information: MainNet: http://dappnode 3.ont.io, TestNet: http://polaris5.ont.io.
+Pre-executing a transaction is optional. The purpose is that reminding users the ONT/ONG transfer amount spent in this transaction. You need to connect to the fixed node to pre-execute before returning Notify information: MainNet: http://dappnode3.ont.io, TestNet: http://polaris5.ont.io.
 
 
 > Notify needs to be traversed to make a judgment, because the transaction may have multiple transfer events or other contract events. We determine whether it is ONT or ONG transfer through the contract address, and then determine the transfer method and the transferor. 
