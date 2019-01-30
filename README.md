@@ -3,7 +3,7 @@ English | [中文](README_CN.md)
 
 # dapi-mobile usage scene description
 
-The mobile dAPI specification document includes three scenarios: wake-up, scan code, and open H5 DApp in the wallet. Wallet that already supports dAPI[MATH](http://www.mathwallet.org/en/)、[onion](http://onion.fun/). For docking, please refer to the corresponding docking document. Please see the details in [CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEPS/CEP1.mediawiki)
+The mobile dAPI specification document includes three scenarios: wake-up, scan code, and open H5 DApp in the wallet. Wallet that already supports dAPI[MATH](http://www.mathwallet.org/en/)、[Onion](http://onion.fun/). For docking, please refer to the corresponding docking document. Please see the details in [CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEPS/CEP1.mediawiki)
 
 Reference wallet download link: http://101.132.193.149/files/app-debug.apk
 
