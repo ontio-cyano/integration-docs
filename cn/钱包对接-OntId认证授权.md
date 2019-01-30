@@ -19,7 +19,7 @@
 * 认证URL：https://auth.ont.io/#/authHome 
 * 授权URL：https://auth.ont.io/#/mgmtHome?ontid={ontid}
 
-对接时可以参考[cyano钱包SDK](#dApi-mobile provider sdk)，参考钱包下载链接： http://101.132.193.149/files/app-debug.apk
+对接时可需要导入cyano钱包SDK，参考钱包下载链接： http://101.132.193.149/files/app-debug.apk
 
 ## 认证和授权流程
 
