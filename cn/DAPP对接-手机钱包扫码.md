@@ -11,7 +11,7 @@
 
 ## 交互流程说明
 
-![login-invoke](images/split-login-invoke.png)
+![login-invoke](../images/split-login-invoke.png)
 
 ### Login
 - 1 DApp方提供二维码（[登陆二维码标准](#登陆二维码标准)）
