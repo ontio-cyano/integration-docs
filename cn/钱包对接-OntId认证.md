@@ -35,11 +35,11 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 ![](https://raw.githubusercontent.com/ontio/documentation/master/pro-website-docs/assets/auth.png)
 
-### 认证和授权页面
+### 认证、授权、管理页面
 
 <p>
+  <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ontid/authenticate.png">
   <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ontid/authorize.png">
-   <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ontid/authenticate.png">
   <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ontid/ontid-manage.png">
 </p>
 
