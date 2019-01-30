@@ -3,15 +3,15 @@
 本协议将帮助您的应用实现ONT ID认证、授权，典型的应用之一是CandyBox。
 
 支持的功能：
-* getIdentity
+* 获取身份信息getIdentity
 * 授权Authorization（请求授权）
-* CandyBox服务器接口
+* CandyBox服务器接口： 接收claim原文
 
 ## getIdentity和授权流程
 
 认证和授权页面由官方提供，钱包接入方需要提供后台服务器，服务器负责签名和与ONTPASS通信。
 
-### getIdentity
+### 获取身份信息getIdentity
 
 获取钱包当前身份信息。
 
@@ -77,7 +77,8 @@ getIdentity：
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-	    "subaction": "getIdentity"
+	    "subaction": "getIdentity",
+	    "did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
 	}
 }
 ```
