@@ -15,6 +15,8 @@
 3. [认证DAPP请求人脸识别](#认证DAPP请求人脸识别)
 4. [认证DAPP请求提交认证信息](#认证DAPP请求提交认证信息)
 
+* 认证URL：https://auth.ont.io/#/authHome 
+* 授权URL：https://auth.ont.io/#/mgmtHome?ontid=
 
 
 ## 认证和授权流程
