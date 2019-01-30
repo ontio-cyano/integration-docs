@@ -1,8 +1,8 @@
 ## OntId认证和授权
 
-本协议将帮助您的应用实现ONT ID管理、认证、授权。
+本协议将帮助您的钱包实现ONT ID管理、认证、授权功能，完成对接后将支持基于本体生态的ONTID相关的DAPP，如CandyBox。
 
-钱包需要支持的四个功能：
+钱包需要对接四个功能：
 * 处理认证（Authentication）(注册ontid，人脸识别和提交认证)
 * 处理授权（Authorization）: CandyBox发送授权请求
 * 钱包ontid管理：创建、删除、导出
@@ -38,9 +38,9 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 ### 认证和授权页面
 
 <p>
-  <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration/master/images/ontid/authorize.png">
-   <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration/master/images/ontid/authenticate.png">
-  <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration/master/images/ontid/ontid-manage.png">
+  <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ontid/authorize.png">
+   <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ontid/authenticate.png">
+  <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ontid/ontid-manage.png">
 </p>
 
 ## 实现步骤
