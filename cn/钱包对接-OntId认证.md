@@ -1,32 +1,50 @@
 ## OntId认证和授权
 
-本协议将帮助您的应用实现ONT ID创建、认证、管理、授权。
+本协议将帮助您的应用实现ONT ID管理、认证、授权。
 
-目前已支持的功能：
-* 认证Authentication(注册ontid，人脸识别和提交认证)
-* 授权Authorization
-* ontid管理
-* 服务器
+钱包需要支持的四个功能：
+* 处理认证（Authentication）(注册ontid，人脸识别和提交认证)
+* 处理授权（Authorization）: CandyBox发送授权请求
+* 钱包ontid管理：创建、删除、导出
+* 钱包方服务器：签名功能
+
+认证包含的subaction处理请求有四个：
+
+1. [CandyBox请求身份信息](#CandyBox请求身份信息)
+2. [认证DAPP请求获取注册ontid交易](#认证DAPP请求获取注册ontid交易)
+3. [认证DAPP请求人脸识别](#认证DAPP请求人脸识别)
+4. [认证DAPP请求提交认证信息](#认证DAPP请求提交认证信息)
+
+
 
 ## 认证和授权流程
 
 认证和授权页面由官方提供，钱包接入方需要提供后台服务器，服务器负责签名和与ONTPASS通信。
 
-### 认证Authentication
+### 认证Authentication流程
 
 ONT ID用户身份认证流程，认证过程中如果发现该ONTID没有注册到链上，会帮忙注册：
 
 ![输入密码](https://raw.githubusercontent.com/ontio/documentation/master/pro-website-docs/assets/ui-register.jpg) 
 
-### 授权Authorization
+### 授权Authorization流程
 
 ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景方，比如在CandyBox场景中，用户需要将授权信息提供给Candy项目方，才可以获得Candy。 流程是这样的：
 
 ![](https://raw.githubusercontent.com/ontio/documentation/master/pro-website-docs/assets/auth.png)
 
+### 认证和授权页面
+
+<p>
+  <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration/master/images/ontid/authorize.png">
+   <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration/master/images/ontid/authenticate.png">
+  <img width="250px" src="https://raw.githubusercontent.com/ontio-cyano/integration/master/images/ontid/ontid-manage.png">
+</p>
+
 ## 实现步骤
 
 钱包需要分别实现认证和授权两个Action。
+
 
 ### CandyBox请求身份信息
 
@@ -61,7 +79,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 如果没有身份，打开身份页面。
 
 
-### 获取注册ontid交易
+### 认证DAPP请求获取注册ontid交易
 <br>
 
 认证时需要注册ontid，打开认证页面时，向钱包请求注册ontid交易的hex数据。
@@ -97,7 +115,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 }
 ```
 
-### 人脸识别
+### 认证DAPP请求人脸识别
 <br>
 
 认证过程中需要钱包后台服务器签名，再发送认证信息给ONTPASS。如果需要人脸识别，请求打开原生做人脸识别。
@@ -132,7 +150,7 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 }
 ```
 
-### 提交认证
+### 认证DAPP请求提交认证
 
 #### DAPP发送提交认证请求
 
@@ -234,7 +252,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 
 用户在CandyBox页面（如Candybox）点击授权  
 
-#### DAPP发送授权请求
+#### CandyBox发送授权请求
 <br>
 
 数据如下，**URI编码，Base64编码**后CandyBox发送请求：
