@@ -25,7 +25,7 @@
 
 ### 认证Authentication流程
 
-ONT ID用户身份认证流程，认证过程中如果发现该ONTID没有注册到链上，会帮忙注册：
+ONTID用户身份认证流程，认证过程中如果发现该ONTID没有注册到链上，需要用户签名，ONTPASS会帮忙注册：
 
 ![输入密码](https://raw.githubusercontent.com/ontio/documentation/master/pro-website-docs/assets/ui-register.jpg) 
 
