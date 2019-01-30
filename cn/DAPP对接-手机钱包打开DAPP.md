@@ -6,7 +6,7 @@
 
 * 移动版dApi使用方法: [dapi for mobile](https://github.com/ontio-cyano/cyano-bridge)
 * Chrome插件钱包的dApi使用方法[dapi for chrome](https://github.com/ontio/ontology-dapi)
-* 兼容移动版和Chrome插件版例子：[dapi-universal](https://github.com/ontio-cyano/dapi-universal)
+* 兼容移动版和Chrome插件版dApi的代码例子：[dapi-universal](https://github.com/ontio-cyano/dapi-universal)
 
 ### dApi接口初始化
 
