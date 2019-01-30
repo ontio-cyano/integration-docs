@@ -10,11 +10,11 @@
 * [钱包对接-扫码接入流程](cn/钱包对接-扫码.md)
 * [钱包对接-钱包打开DApp接入流程](cn/钱包对接-钱包打开DApp.md)
 * [钱包对接-唤醒接入流程(未完成)](cn/钱包对接-唤醒(未完成).md)
-* [钱包对接-ONTID认证授权](cn/钱包对接-OntId认证.md)
+* [钱包对接-ONTID认证授权](cn/钱包对接-OntId认证授权.md)
 * [DAPP对接-手机钱包打开DAPP](cn/DAPP对接-手机钱包打开DAPP.md)
 * [DAPP对接-手机钱包扫码](cn/DAPP对接-手机钱包扫码.md)
 * [DAPP对接-chrome插件钱包](cn/DAPP对接-chrome插件钱包.md)
-* [DAPP对接-ONTID认证授权](cn/DAPP对接-OntId认证.md)
+* [DAPP对接-ONTID认证授权](cn/DAPP对接-OntId认证授权.md)
 
 
 ## 场景1和2： 唤醒、扫码场景
