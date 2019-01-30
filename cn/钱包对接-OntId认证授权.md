@@ -15,9 +15,11 @@
 3. [认证DAPP请求人脸识别](#认证DAPP请求人脸识别)
 4. [认证DAPP请求提交认证信息](#认证DAPP请求提交认证信息)
 
+钱包打开的认证和授权URL地址：
 * 认证URL：https://auth.ont.io/#/authHome 
-* 授权URL：https://auth.ont.io/#/mgmtHome?ontid=
+* 授权URL：https://auth.ont.io/#/mgmtHome?ontid={ontid}
 
+对接时可以参考[cyano钱包SDK](#dApi-mobile provider sdk)，参考钱包下载链接： http://101.132.193.149/files/app-debug.apk
 
 ## 认证和授权流程
 
@@ -418,3 +420,25 @@ callback 接收消息格式：
 2. 服务器获取认证内容，服务器签名
 3. 服务器发送认证请求地址和签名给ONTPASS
 
+
+
+## 代码参考
+
+##### 签名验证方法
+* [java sdk验签](https://github.com/ontio/ontology-java-sdk/blob/master/docs/cn/interface.md#%E7%AD%BE%E5%90%8D%E9%AA%8C%E7%AD%BE)
+* [ts sdk验签](https://github.com/ontio/ontology-ts-sdk/blob/master/test/message.test.ts)
+
+##### DApp后端查询交易事件
+* [java sdk 交易事件查询方法](https://github.com/ontio/ontology-java-sdk/blob/master/docs/cn/basic.md#%E4%B8%8E%E9%93%BE%E4%BA%A4%E4%BA%92%E6%8E%A5%E5%8F%A3)
+* [ts sdk 交易事件查询方法](https://github.com/ontio/ontology-ts-sdk/blob/master/test/websocket.test.ts)
+
+##### 钱包
+* [cyano-android](https://github.com/ontio-cyano/cyano-android)
+* [cyano-ios](https://github.com/ontio-cyano/cyano-ios)
+
+##### dApi-mobile client sdk
+* [cyano-bridge](https://github.com/ontio-cyano/cyano-bridge)
+
+##### dApi-mobile provider sdk
+* [cyano-android-sdk](https://github.com/ontio-cyano/cyano-android-sdk)
+* [cyano-ios-sdk](https://github.com/ontio-cyano/cyano-ios-sdk)
