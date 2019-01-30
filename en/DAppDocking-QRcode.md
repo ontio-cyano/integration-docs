@@ -36,7 +36,6 @@ Participants involved in the process include:
 ## Docking process
 
 
-
 ### The process of login docking
 
 #### Standard of login QRcode

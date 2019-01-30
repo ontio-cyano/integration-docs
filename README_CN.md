@@ -1,28 +1,28 @@
-# dapi-mobile usage scene description
+# dapi-mobile使用场景说明
 
-The mobile dAPI specification document includes three scenarios: wake-up, scan code, and open H5 DApp in the wallet. Wallet that already supports dAPI[MATH](http://www.mathwallet.org/en/)、[onion](http://onion.fun/). For docking, please refer to the corresponding docking document. Please see the details in [CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEPS/CEP1.mediawiki)
+移动端dAPI规范文档包括唤醒、扫码、钱包中打开H5 DApp三种场景。已支持dAPI的钱包[麦子钱包](http://www.mathwallet.org/en/)、[onion](http://onion.fun/),对接请参考对应的对接文档。协议详情请看[CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEPS/CEP1.mediawiki)
 
-
-* [Wallet docking - open DApp in wallet](en/WalletDocking-wallet-open-DApp_en.md)
-* [Wallet docking - scan QR code](en/WalletDocking-scan-qrcode_en.md)
-* [DAPP docking - open DApp in wallet](en/DAppDocking-Wallet-Opens-DApp.md)
-* [DAPP docking - QR code](en/DAppDocking-QRcode.md)
-* [DAPP docking - use chrome extension wallet](en/DAppDocking-use%20chrome%20extension%20wallet.md)
-
-
-## Scenario 1 and 2: Wake up, scan the QRcode
+* [钱包对接-扫码接入流程](钱包对接-扫码.md)
+* [钱包对接-钱包打开DApp接入流程](钱包对接-钱包打开DApp.md)
+* [钱包对接-唤醒接入流程](钱包对接-唤醒(未完成).md)
+* [DAPP对接-手机钱包打开DAPP](DAPP对接-手机钱包打开DAPP.md)
+* [DAPP对接-手机钱包扫码](DAPP对接-手机钱包扫码.md)
+* [DAPP对接-chrome插件钱包](DAPP对接-chrome插件钱包.md)
 
 
-##### Login, call smart contract
+## 场景1和2： 唤醒、扫码场景
+
+
+##### 登录、调用智能合约
 
 ![](images/split-login-invoke.png)
 
-##### Call smart contract when not logged in
+##### 未登录时调用智能合约
 
 ![](images/invoke-with-login.png)
 
 
-## Scenario 3: Open H5 DApp in the wallet
+## 场景3： 钱包中打开H5 DApp
 
 1. Open DApp in Provider
 2. Get account or get identity
@@ -31,15 +31,15 @@ The mobile dAPI specification document includes three scenarios: wake-up, scan c
 
 ![](images/scenario3.png)
 
-## DEMO
+## 钱包演示
 
-Mobile version of Cyano wallet source link [cyano-android](https://github.com/ontio-cyano/cyano-android),[cyano-ios](https://github.com/ontio-cyano/cyano-ios)。
+移动版Cyano钱包源码链接地址[cyano-android](https://github.com/ontio-cyano/cyano-android),[cyano-ios](https://github.com/ontio-cyano/cyano-ios)。
 
-H5 DApp DEMO: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
+H5 DApp演示: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
 
 ### Open DApp in Provider
 
-Open DApp in wallet: http://101.132.193.149:5000/#/
+钱包中打开DApp：http://101.132.193.149:5000/#/
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-open-dapp.jpg" height="350" width="200">
@@ -47,7 +47,7 @@ Open DApp in wallet: http://101.132.193.149:5000/#/
 
 ### Get account or get identity
 
-DApp login If you do not need to verify the user identity, directly query the account or identity information:
+DApp登录如果不需要验证用户身份，直接查询账号或身份信息：
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/02-getAccount.jpg" height="350" width="200">
@@ -56,7 +56,7 @@ DApp login If you do not need to verify the user identity, directly query the ac
 
 ### Login DApp
 
-DApp login if you need to verify the user's identity: DApp sends a message to the wallet signature, DApp verification signature.
+DApp登录如果需要验证用户身份: DApp发消息到给钱包签名，DApp验证签名。
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/03-login-message.jpg" height="350" width="200">
@@ -66,10 +66,7 @@ DApp login if you need to verify the user's identity: DApp sends a message to th
 
 ### DApp Invoke smart contract
 
-DApp calls the contract:
-1. the user signs the pre-execution contract.
-2. the user confirms and sends the transaction,.
-3. returns the transaction hash to DAPP.
+DApp调用合约，用户签名后预执行合约，用户确认并发送交易，返回交易hash给DAPP。
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/05-invoke-message.jpg" height="350" width="200">

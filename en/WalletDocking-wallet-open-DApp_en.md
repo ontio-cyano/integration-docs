@@ -57,8 +57,6 @@ URI scheme for DApp to request data：```ontprovider://ont.io?param=Base64.encod
 
 ## Docking process
 
-### Prerequisite
-Before using it，you need to contact [the Ontology cooperation](https://info.ont.io/cooperation/en)
 
 
 ### The procedure for querying info of Provider
@@ -258,12 +256,12 @@ The data is as follows. Sending request after **URI encoding，Base64 encoding**
 
 ### The procedure for invoking a contract
 
-If action is invoke, executing normal process.
+If action is ```invoke```, executing normal process.
 
 
-If action is invokeRead, it is a pre-executing transaction and users do not need to sign the transaction. The result will be returned to DApp.
+If action is i```nvokeRead```, it is a pre-executing transaction and users do not need to sign the transaction. The result will be returned to DApp.
 
-If action is invokePasswordFree, 
+If action is ```invokePasswordFree```, 
 Some games use the automatic bet function, such as betting once every 10 seconds. For a better game experience, the user only needs to enter the password once. We only trust fixed methods and parameters, not all methods in the entire contract, so saving the parameters of the transaction after entering the password (this parameter is ((InvokeCode)txs[0]).code)). If the next request is the same data,  the system will not require the password and pre-execution again. Before leaving the current DApp, users need to remember to clear the private key and parameters in memory.
 
 #### DApp requests invoking a smart contract
