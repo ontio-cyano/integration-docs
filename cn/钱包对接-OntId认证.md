@@ -28,6 +28,38 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 钱包需要分别实现认证和授权两个Action。
 
+### CandyBox请求身份信息
+
+```
+
+{
+	"action": "authentication",
+	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
+	"params": {
+	    "subaction": "getIdentity"
+	}
+}
+
+
+```
+钱包如果已经有身份，返回身份信息：
+
+```
+{
+	"action": "authentication", // or getIdentity
+	"version": "v1.0.0",
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
+	"error": 0,
+	"desc": "SUCCESS",
+	"result": {
+	    "subaction": "getIdentity",
+	    "did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"  
+	 }
+}
+```
+如果没有身份，打开身份页面。
+
 
 ### 获取注册ontid交易
 <br>

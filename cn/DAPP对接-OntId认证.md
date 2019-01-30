@@ -47,12 +47,11 @@ getIdentity：
 ```
 
 {
-	"action": "getIdentity",
+	"action": "authentication",
 	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-		"dappName": "dapp Name",
-		"dappIcon": "dapp Icon"
+	    "subaction": "getIdentity"
 	}
 }
 
