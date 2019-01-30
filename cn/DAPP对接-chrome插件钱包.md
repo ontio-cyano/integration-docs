@@ -17,10 +17,6 @@
 
 [运行例子](#运行例子)
 
-[为你的dApp写智能合约](#为你的dApp写智能合约)
-+ [编译你的智能合约](#编译你的智能合约)
-+ [部署你的智能合约](#部署你的智能合约)
-+ [测试你的智能合约](#测试你的智能合约)
 
 ### 概述
 
@@ -62,6 +58,22 @@ client.registerClient({});
 
 #### dAPI 方法
 创建dAPI 实例成功后, 就可以在你的dApp中调用 dAPI 方法.
+
+##### 获取账号或身份信息
+
+```
+account = await client.api.asset.getAccount()
+res = await client.api.identity.getIdentity();
+```
+
+
+##### 智能合约方法
+```typescript
+const result = await client.api.smartContract.invoke({contract,method,parameters,gasPrice,gasLimit,requireIdentity});
+const result = await client.api.smartContract.invokeRead({ contract, method, parameters });
+const result = await client.api.smartContract.deploy({code,name,version,author,email,description,needStorage,gasPrice,gasLimit});
+```
+
 ##### 与链交互方法
 ```typescript
 const network = await client.api.network.getNetwork();
@@ -74,14 +86,10 @@ const balance = await client.api.network.getBalance({ address: 'AcyLq3tokVpkMBML
 ```
 const result = await client.api.asset.makeTransfer({ recipient, asset, amount });
 ```
-##### 智能合约方法
-```typescript
-const result = await client.api.smartContract.invoke({contract,method,parameters,gasPrice,gasLimit,requireIdentity});
-const result = await client.api.smartContract.invokeRead({ contract, method, parameters });
-const result = await client.api.smartContract.deploy({code,name,version,author,email,description,needStorage,gasPrice,gasLimit});
-```
+
 ##### 数据签名
 
+可以被用做登录时验证用户身份。
 ```
 const message: string = values.message;
 const signature: Signature = {
@@ -129,37 +137,4 @@ $ npm run start
 gaslimit根据合约执行复杂性而定，可以通过预执行查询该调用需要的最小gaslimit值。Native合约调用gaslimit默认是20000。部署合约根据合约而定，gaslimit一般是20000000以上。
 
 
-### 为你的dApp写智能合约
 
-dApp后端逻辑和存储需要使用智能合约，可以通过**SmartX**编辑和调试智能合约，**SmartX**中包含多个合约例子。[SmartX](http://smartx.ont.io/)，[Smart Contract 教程](https://github.com/ontio/documentation/tree/master/smart-contract-tutorial)
-
-![SmartX Login](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/smartx.png)
-
-
-#### 编译和部署你的智能合约
-
-**SmartX** 使用 Cyano Wallet 帮助部署和调用合约. 请确保按照了 Cyano 并创建了测试网账号.
-
-#### 编译你的智能合约
-
-使用 **SmartX** 编译合约
-
-![smart contract deploy and invoke](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/smartx-deploy.png)
-
-#### 部署你的智能合约
-
-写完智能合约，编译成功后，下一步是部署和调用智能合约.  如果你没有测试网的ONG，需要 [申请 测试网 ONG in Discord](https://discordapp.com/channels/400884201773334540/453499298097922068)
-
-![Deploy](https://s1.ax1x.com/2018/09/03/PzhTCd.png)
-
-
-
-![Invoke](https://s1.ax1x.com/2018/09/03/Pz5JO0.png) 
-
-### 测试你的智能合约
-
-可以使用测试框架测试你的智能合约 [smart contract automated testing framework](https://github.com/ontio-community/ontology-sctf)， 如果需要部署到私链，请下载最新版Ontology并启动， [Ontology release](https://github.com/ontio/ontology/releases).
-```
-$ ./ontology --testmode 
-
-```
