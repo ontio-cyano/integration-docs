@@ -1,6 +1,6 @@
 # dapi-mobile使用场景说明
 
-移动端dAPI规范文档包括唤醒、扫码、钱包中打开H5 DApp三种场景。已支持dAPI的钱包[麦子钱包](http://www.mathwallet.org/en/)、[onion](http://onion.fun/),对接请参考对应的对接文档。协议详情请看[CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEP1.mediawiki)
+移动端dAPI规范文档包括唤醒、扫码、钱包中打开H5 DApp三种场景。已支持dAPI的钱包[麦子钱包](http://www.mathwallet.org/en/)、[onion](http://onion.fun/),对接请参考对应的对接文档。协议详情请看[CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEPS/CEP1.mediawiki)
 
 * [钱包对接-扫码接入流程](钱包对接-扫码.md)
 * [钱包对接-钱包打开DApp接入流程](钱包对接-钱包打开DApp.md)
