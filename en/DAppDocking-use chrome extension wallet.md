@@ -5,7 +5,7 @@
 
 The dApi of mobile version only provides several important interfaces. Query related interfaces can directly call the query API of blockchain browser, [explorer api](http://dev-docs.ont.io/#/docs-en/explorer/overview).
 
-The usage of the dApi of mobile version: [cyano-dapi-mobile](https://github.com/ontio-cyano/cyano-dapi-mobile)
+The usage of the dApi of mobile version: [cyano-dapi-mobile](https://github.com/ontio-cyano/cyano-bridge)
 
 The usage of the dApi of chrome extension: [cyano-dapi](https://github.com/ontio/ontology-dapi)
 
