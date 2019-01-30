@@ -13,7 +13,7 @@
 
 DApp请求数据URI scheme：```ontprovider://ont.io?param=Base64.encode(Uri.encode({the json data}.toString()))```
 
-![login-invoke](images/scenario3.png)
+![login-invoke](../images/scenario3.png)
 
 ### 钱包打开H5 DApp
 
