@@ -3,8 +3,8 @@
 本协议将帮助您的钱包实现ONT ID管理、认证、授权功能，完成对接后将支持基于本体生态的ONTID相关的DAPP，如CandyBox。
 
 为了方便集成，ontid认证授权采用H5页面展示，钱包方需要根据协议做相应的处理，钱包需要对接四个功能：
-* 处理认证（Authentication）(注册ontid，人脸识别和提交认证)
-* 处理授权（Authorization）: CandyBox发送授权请求
+* 处理认证（Authentication）：(注册ontid，人脸识别和提交认证)
+* 处理授权（Authorization）：CandyBox发送授权请求
 * 钱包ontid管理：创建、删除、导出
 * 钱包方服务器：签名功能
 
