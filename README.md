@@ -2,6 +2,7 @@
 
 The mobile dAPI specification document includes three scenarios: wake-up, scan code, and open H5 DApp in the wallet. Wallet that already supports dAPI[MATH](http://www.mathwallet.org/en/)、[onion](http://onion.fun/). For docking, please refer to the corresponding docking document. Please see the details in [CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEPS/CEP1.mediawiki)
 
+Reference wallet download link: http://101.132.193.149/files/app-debug.apk
 
 * [Wallet docking - open DApp in wallet](en/WalletDocking-wallet-open-DApp_en.md)
 * [Wallet docking - scan QR code](en/WalletDocking-scan-qrcode_en.md)
