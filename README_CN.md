@@ -1,5 +1,5 @@
 
-[English](README_CN.md) | 中文
+[English](README.md) | 中文
 
 # dapi-mobile使用场景说明
 
