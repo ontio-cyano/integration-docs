@@ -96,8 +96,8 @@ getIdentity：
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
-        "subaction": "requestAuthorization",
-        "seqNo": "0001",
+		"subaction": "requestAuthorization",
+		"seqNo": "0001",
 		"userOntid": "did:ont:Assxxxxxxxxxxxxx",
 		"dappOntid": "did:ont:Assxxxxxxxxxxxxx",
 		"dappName": "candy box",
