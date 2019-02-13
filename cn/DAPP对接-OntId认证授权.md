@@ -40,29 +40,24 @@ getIdentity：
 
 
 
-#### 获取身份请求
+#### 获取账户信息请求
 
-数据如下，**URI编码，Base64编码**后DAPP发送请求：
-
+数据如下，**URI编码，Base64编码**后CandyBox发送请求：
 ```
 
 {
-	"action": "authentication",
+	"action": "getAccount", 
 	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
-	    "subaction": "getIdentity"
+		"dappName": "dapp Name", 
+		"dappIcon": "dapp Icon"
 	}
 }
 
 
 ```
-
-|字段|类型|定义|
-| :---| :---| :---|
-| action   |  string |  操作类型 |
-| dappName   | string  | dapp名字 |
-| dappIcon   | string  | dapp icon信息 |
+账户对应的身份是```did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ```，认证和授权时会使用。
 
 #### 获取身份请求处理
 钱包先**URI解码，Base64解码**后。检查是否已经有Identity，如果没有，就进入创建ontid和认证。如果已经有Identity，就返回Identity。

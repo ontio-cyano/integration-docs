@@ -50,37 +50,38 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 钱包需要分别实现认证和授权两个Action。
 
 
-### CandyBox请求身份信息
+### CandyBox请求资产账户信息
 
+数据如下，**URI编码，Base64编码**后CandyBox发送请求：
 ```
 
 {
-	"action": "authentication",
+	"action": "getAccount", 
 	"version": "v1.0.0",
-	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
+	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
-	    "subaction": "getIdentity"
+		"dappName": "dapp Name", 
+		"dappIcon": "dapp Icon"
 	}
 }
 
 
 ```
-钱包如果已经有身份，返回身份信息：
+钱包返回资产账户信息：
 
+**URI解码，Base64解码**后，获取到的数据如下：
 ```
 {
-	"action": "authentication", 
+	"action": "getAccount", // or getIdentity
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"error": 0,
 	"desc": "SUCCESS",
-	"result": {
-	    "subaction": "getIdentity",
-	    "ontid": did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"  
-	 }
+	"result": "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"  // or  "did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
 }
 ```
-如果没有身份，打开身份页面。
+
+账户对应的身份是```did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ```，认证和授权时会使用。
 
 
 ### 认证DAPP请求获取注册ontid交易
