@@ -69,14 +69,14 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 
 ```
 {
-	"action": "authentication", // or getIdentity
+	"action": "authentication", 
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"error": 0,
 	"desc": "SUCCESS",
 	"result": {
 	    "subaction": "getIdentity",
-	    "did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"  
+	    "ontid": did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"  
 	 }
 }
 ```

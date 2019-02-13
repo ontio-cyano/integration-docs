@@ -78,7 +78,7 @@ getIdentity：
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",		
 	"params": {
 	    "subaction": "getIdentity",
-	    "did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+	    "ontid": "did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
 	}
 }
 ```
