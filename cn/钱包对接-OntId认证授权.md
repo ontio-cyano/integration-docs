@@ -72,12 +72,12 @@ ONT ID授权指的是把用户已经获得的认证，授权给某个DAPP场景�
 **URI解码，Base64解码**后，获取到的数据如下：
 ```
 {
-	"action": "getAccount", // or getIdentity
+	"action": "getAccount", 
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"error": 0,
 	"desc": "SUCCESS",
-	"result": "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"  // or  "did:ont:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+	"result": "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"  
 }
 ```
 
