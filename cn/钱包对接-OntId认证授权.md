@@ -269,7 +269,7 @@ Method：POST /HTTP/1.1 Content-Type: application/json
 	"params": {
 		"subaction": "requestAuthorization",
 		"seqNo": "0001",
-	    "userOntid": "did:ont:Assxxxxxxxxxxxxx",
+		"userOntid": "did:ont:Assxxxxxxxxxxxxx",
 		"dappOntid": "did:ont:Assxxxxxxxxxxxxx",
 		"dappName": "candy box",
 		"callback": "http://candybox.com/callback",
