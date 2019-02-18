@@ -7,8 +7,13 @@ The mobile dAPI specification document includes three scenarios: wake-up, scan c
 
 Reference wallet download link: http://101.132.193.149/files/app-debug.apk
 
+Wallet docking:
+
 * [Wallet docking - open DApp in wallet](en/WalletDocking-wallet-open-DApp_en.md)
 * [Wallet docking - scan QR code](en/WalletDocking-scan-qrcode_en.md)
+
+DAPP docking:
+
 * [DAPP docking - open DApp in wallet](en/DAppDocking-Wallet-Opens-DApp.md)
 * [DAPP docking - QR code](en/DAppDocking-QRcode.md)
 * [DAPP docking - use chrome extension wallet](en/DAppDocking-use%20chrome%20extension%20wallet.md)
