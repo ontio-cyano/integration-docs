@@ -189,7 +189,7 @@ According to the qrcodeUrl in the QRcode, the data is as follows.
 
 
 ```
-
+>> When invoking contract, if the payer is not filled in the QR code, it should be filled in by the wallet. If the payer is filled in the QR code, the wallet should verify that it is same with the asset address of the wallet.
 
 Provider builds a transaction and user signs it. Then Provider pre-executes the transaction and user confirms. Next, Provider sends it to the blockchain, and a transaction hash wil be returned. Finally, it posts transaction hash to callback url.
 

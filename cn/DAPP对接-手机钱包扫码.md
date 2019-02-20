@@ -181,7 +181,7 @@ method: post
 
 
 ```
-
+>> 调用合约时，如果二维码里payer没填写，就由钱包填写。如果二维码里payer有填写，钱包要验证是否与钱包的资产地址是一致的。
 
 Provider 构造交易，用户签名，预执行交易，发送交易，POST 交易hash给callback url。
 
