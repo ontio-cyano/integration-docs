@@ -52,7 +52,7 @@ Open DApp in wallet: http://101.132.193.149:5000/#/
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-dapps.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-private-dapp.png" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-private-dapp.jpg" height="350" width="200">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-open-dapp.png" height="350" width="200">
 </div>
 
@@ -69,7 +69,7 @@ DApp login If you do not need to verify the user identity, directly query the ac
 DApp login if you need to verify the user's identity: DApp sends a message to the wallet signature, DApp verification signature.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/03-login-pwd.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/03-login-pwd.png" height="350" width="200">
   <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/04-logined.jpg" height="350" width="200">
 </div>
 
@@ -83,6 +83,6 @@ DApp calls the contract:
 <div align="center">
   <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/input-password.jpg" height="350" width="200">
   <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/05-pre-exec-result.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/06-dapp-recv-txhash.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/06-dapp-recv-txhash.png" height="350" width="200">
 </div>
 
