@@ -61,6 +61,7 @@ Open DApp in wallet: http://101.132.193.149:5000/#/
 DApp login If you do not need to verify the user identity, directly query the account or identity information:
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-open-dapp.png" height="350" width="200">
   <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/02-getAccount.jpg" height="350" width="200">
 </div>
 
@@ -69,6 +70,7 @@ DApp login If you do not need to verify the user identity, directly query the ac
 DApp login if you need to verify the user's identity: DApp sends a message to the wallet signature, DApp verification signature.
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-open-dapp.png" height="350" width="200">
   <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/03-login-pwd.png" height="350" width="200">
   <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/04-logined.jpg" height="350" width="200">
 </div>
