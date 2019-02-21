@@ -51,9 +51,9 @@ H5 DApp DEMO source link: [mobile-dapp-demo](https://github.com/ontio-cyano/mobi
 Open DApp in wallet: http://101.132.193.149:5000/#/
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-dapps.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-private-dapp.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-open-dapp.png" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-dapps.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-private-dapp.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-open-dapp.png" height="350" width="200">
 </div>
 
 ### DApp Get account or get identity
@@ -82,7 +82,7 @@ DApp calls the contract:
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/input-password.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/05-pre-exec-result.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/06-dapp-recv-txhash.png" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/05-pre-exec-result.png" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/06-dapp-recv-txhash.jpg" height="350" width="200">
 </div>
 

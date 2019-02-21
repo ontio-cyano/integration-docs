@@ -55,7 +55,9 @@ H5 DApp演示: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-dem
 钱包中打开DApp：http://101.132.193.149:5000/#/
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-open-dapp.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-dapps.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-private-dapp.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-open-dapp.png" height="350" width="200">
 </div>
 
 ### Get account or get identity
