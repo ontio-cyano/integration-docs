@@ -63,9 +63,9 @@ H5 DApp演示: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-dem
 DApp登录如果不需要验证用户身份，直接查询账号或身份信息：
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-dapps.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-private-dapp.png" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-open-dapp.png" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-dapps.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-private-dapp.png" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/01-open-dapp.png" height="350" width="200">
 </div>
 
 ### Login DApp
@@ -73,8 +73,8 @@ DApp登录如果不需要验证用户身份，直接查询账号或身份信息�
 DApp登录如果需要验证用户身份: DApp发消息到给钱包签名，DApp验证签名。
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/03-login-pwd.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/04-logined.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/03-login-pwd.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/04-logined.jpg" height="350" width="200">
 </div>
 
 ### DApp Invoke smart contract
@@ -82,8 +82,8 @@ DApp登录如果需要验证用户身份: DApp发消息到给钱包签名，DApp
 DApp调用合约，用户签名后预执行合约，用户确认并发送交易，返回交易hash给DAPP。
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/input-password.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/05-pre-exec-result.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/06-dapp-recv-txhash.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/input-password.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/05-pre-exec-result.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-cyano/integration-docs/master/images/ios/06-dapp-recv-txhash.jpg" height="350" width="200">
 </div>
 
