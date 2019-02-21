@@ -48,7 +48,7 @@ DAPP对接：
 
 移动版Cyano钱包源码链接地址[cyano-android](https://github.com/ontio-cyano/cyano-android),[cyano-ios](https://github.com/ontio-cyano/cyano-ios)。
 
-H5 DApp演示: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
+H5 DApp例子源码: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
 
 ### Open DApp in Provider
 
