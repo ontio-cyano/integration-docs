@@ -44,32 +44,32 @@ DAPP docking:
 
 Mobile version of Cyano wallet source link [cyano-android](https://github.com/ontio-cyano/cyano-android),[cyano-ios](https://github.com/ontio-cyano/cyano-ios)。
 
-H5 DApp DEMO: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
+H5 DApp DEMO source link: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
 
-### Open DApp in Provider
+### Open DApp in Wallet
 
 Open DApp in wallet: http://101.132.193.149:5000/#/
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-open-dapp.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-dapps.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-private-dapp.png" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/01-open-dapp.png" height="350" width="200">
 </div>
 
-### Get account or get identity
+### DApp Get account or get identity
 
 DApp login If you do not need to verify the user identity, directly query the account or identity information:
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/02-getAccount.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/04-logined.jpg" height="350" width="200">
 </div>
 
-### Login DApp
+### DApp Login
 
 DApp login if you need to verify the user's identity: DApp sends a message to the wallet signature, DApp verification signature.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/03-login-message.jpg" height="350" width="200">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/input-password.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/03-login-pwd.jpg" height="350" width="200">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/04-logined.jpg" height="350" width="200">
 </div>
 
@@ -81,9 +81,8 @@ DApp calls the contract:
 3. returns the transaction hash to DAPP.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/05-invoke-message.jpg" height="350" width="200">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/input-password.jpg" height="350" width="200">
   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/05-pre-exec-result.jpg" height="350" width="200">
-   <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/06-dapp-recv-txhash.jpg" height="350" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-community/dapi-mobile-example/master/images/ios/06-dapp-recv-txhash.jpg" height="350" width="200">
 </div>
 
