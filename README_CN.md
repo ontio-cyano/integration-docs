@@ -50,7 +50,7 @@ DAPP对接：
 
 H5 DApp例子源码: [mobile-dapp-demo](https://github.com/ontio-cyano/mobile-dapp-demo)
 
-### Open DApp in Provider
+### 钱包中打开 DApp 
 
 钱包中打开DApp：http://101.132.193.149:5000/#/
 
