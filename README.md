@@ -1,18 +1,23 @@
 
 English | [中文](README_CN.md)
 
-# dapi-mobile usage scene description
+# Docking instructions
 
-The mobile dAPI specification document includes three scenarios: wake-up, scan code, and open H5 DApp in the wallet. Wallet that already supports dAPI [MATH](http://www.mathwallet.org/en/), [Onion](http://onion.fun/). For docking, please refer to the corresponding docking document. Please see the details in [CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEPS/CEP1.mediawiki).
+The mobile dAPI specification document includes three scenarios: wake-up, scan code, and open H5 DApp in the wallet. Wallet that already supports dAPI [MATH](http://www.mathwallet.org/en/), [Onion](http://onion.fun/). For docking, please refer to the corresponding docking document. Please see the details in [CEP1](https://github.com/ontio-cyano/CEPs/blob/master/CEPS/CEP1.mediawiki).DAPPs that already support dAPI as [HyperDragon](https://hyd-go.alfakingdom.com/).
 
 Reference wallet download link: http://101.132.193.149/files/app-debug.apk
 
 Wallet docking:
 
+1. Integration the ONT/ONG/OEP4 assets, need install the corresponding [SDK](http://dev-docs.ont.io/#/docs-cn/SDKs/00-overview) integrated asset function.
+2. Before docking cyano-provider, please download [cyano-android-provider-sdk](https://github.com/ontio-cyano/cyano-android-sdk), [cyano-ios-provider-sdk]( Https://github.com/ontio-cyano/cyano-ios-sdk).
+3. Docking cyano-provider detailed documentation:
 * [Wallet docking - open DApp in wallet](en/WalletDocking-wallet-open-DApp_en.md)
 * [Wallet docking - scan QR code](en/WalletDocking-scan-qrcode_en.md)
 
 DAPP docking:
+1. Please use [cyano-bridge](https://github.com/ontio-cyano/cyano-bridge) for mobile DAPP docking and [dAPI for chrome](https://github.com/) Ontio/ontology-dapi)  for chrome plugin .
+2. Docking cyano-dapi detailed documentation:
 
 * [DAPP docking - open DApp in wallet](en/DAppDocking-Wallet-Opens-DApp.md)
 * [DAPP docking - QR code](en/DAppDocking-QRcode.md)

@@ -226,8 +226,9 @@ Provider 构造交易，用户签名，预执行交易，发送交易，POST 交
 * [cyano-android](https://github.com/ontio-cyano/cyano-android)
 * [cyano-ios](https://github.com/ontio-cyano/cyano-ios)
 
-##### dApi-mobile client sdk
+##### dApi
 * [cyano-bridge](https://github.com/ontio-cyano/cyano-bridge)
+* [dAPI for chrome](https://github.com/ontio/ontology-dapi)
 
 ##### dApi-mobile provider sdk
 * [cyano-android-sdk](https://github.com/ontio-cyano/cyano-android-sdk)
