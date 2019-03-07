@@ -12,16 +12,16 @@ Wallet docking:
 1. Integration the ONT/ONG/OEP4 assets, need install the corresponding [SDK](http://dev-docs.ont.io/#/docs-cn/SDKs/00-overview) integrated asset function.
 2. Before docking cyano-provider, please download [cyano-android-provider-sdk](https://github.com/ontio-cyano/cyano-android-sdk), [cyano-ios-provider-sdk]( Https://github.com/ontio-cyano/cyano-ios-sdk).
 3. Docking cyano-provider detailed documentation:
-* [Wallet docking - open DApp in wallet](en/WalletDocking-wallet-open-DApp_en.md)
-* [Wallet docking - scan QR code](en/WalletDocking-scan-qrcode_en.md)
+* [Wallet integration - open DApp in wallet](en/WalletDocking-wallet-open-DApp_en.md)
+* [Wallet integration - scan QR code](en/WalletDocking-scan-qrcode_en.md)
 
 DAPP docking:
 1. Please use [cyano-bridge](https://github.com/ontio-cyano/cyano-bridge) for mobile DAPP docking and [dAPI for chrome](https://github.com/) Ontio/ontology-dapi)  for chrome plugin .
 2. Docking cyano-dapi detailed documentation:
 
-* [DAPP docking - open DApp in wallet](en/DAppDocking-Wallet-Opens-DApp.md)
-* [DAPP docking - QR code](en/DAppDocking-QRcode.md)
-* [DAPP docking - use chrome extension wallet](en/DAppDocking-use%20chrome%20extension%20wallet.md)
+* [DAPP integration - open DApp in wallet](en/DAppDocking-Wallet-Opens-DApp.md)
+* [DAPP integration - QR code](en/DAppDocking-QRcode.md)
+* [DAPP integration - use chrome extension wallet](en/DAppDocking-use%20chrome%20extension%20wallet.md)
 
 
 ## Scenario 1 and 2: Wake up, scan the QRcode
