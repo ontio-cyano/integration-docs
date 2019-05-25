@@ -476,7 +476,7 @@ action是invokePasswordFree: 有些游戏会用到自动投注功能，比如每
 
 ##### 预执行交易
 
-预执行交易返回的Notify结果可以查看用户在这笔交易中会花费多少ONT/ONG。需要连接到固定节点：主网：http://dappnode3.ont.io，测试网：http://polaris5.ont.io
+预执行交易返回的Notify结果可以查看用户在这笔交易中会花费多少ONT/ONG。选择节点：主网：http://dappnode3.ont.io，测试网：http://polaris5.ont.io
 
 > 需要遍历Notify做判断，因为该交易可能有多笔转账或其他事件，通过合约地址判断是ONT还是ONG，再判断transfer方法和转出方。
 
