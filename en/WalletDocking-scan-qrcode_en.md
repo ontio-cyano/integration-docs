@@ -133,7 +133,8 @@ getting by scanning
 	"version": "v1.0.0",
 	"params": {
 		"login": true,
-		"callback": "http://101.132.193.149:4027/invoke/callback",		
+		"callback": "http://101.132.193.149:4027/invoke/callback",	
+		"expire": 1546415363, // QR Code expire time
 		"qrcodeUrl": "http://101.132.193.149:4027/qrcode/AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
 	}
 }
@@ -144,16 +145,16 @@ getting by scanning
 | action      | string  | Operational type，login is set as "login" and  invoking a smart contract is set as "invoke" |
 | qrcodeUrl         | string  | The address of QRcode params                                           |
 | callback         | string  | Optional，it returns the contract hash to DApp server                                          |
+| expire | long | qrcode expire time |
 
 According to the qrcodeUrl in the QRcode, the data is as follows.
 
 ```
 {
 	"action": "invoke",
-    "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
+        "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
 	"version": "v1.0.0",
 	"params": {
-	        "expire": 1546415363, //qrcode expire time
 		"invokeConfig": {
 			"contractHash": "16edbe366d1337eb510c2ff61099424c94aeef02",
 			"functions": [{
