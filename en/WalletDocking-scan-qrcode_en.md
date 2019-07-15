@@ -45,7 +45,7 @@ Getting by scanning
 ```
 {
 	"action": "login",
-    "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
+        "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
 	"version": "v1.0.0",
 	"params": {
 		"type": "ontid or account",
@@ -129,7 +129,7 @@ getting by scanning
 ```
 {
 	"action": "invoke",
-    "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
+        "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
 	"version": "v1.0.0",
 	"params": {
 		"login": true,
@@ -153,6 +153,7 @@ According to the qrcodeUrl in the QRcode, the data is as follows.
     "id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",  	
 	"version": "v1.0.0",
 	"params": {
+	        "expire": 1546415363, //qrcode expire time
 		"invokeConfig": {
 			"contractHash": "16edbe366d1337eb510c2ff61099424c94aeef02",
 			"functions": [{
