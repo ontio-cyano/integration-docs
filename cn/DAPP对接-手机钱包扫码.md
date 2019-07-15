@@ -125,7 +125,8 @@ method: post
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
 		"login": true,
-		"callback": "http://101.132.193.149:4027/invoke/callback",		
+		"callback": "http://101.132.193.149:4027/invoke/callback",
+		"expire": 1546415363, // 二维码过期时间
 		"qrcodeUrl": "http://101.132.193.149:4027/qrcode/AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
 	}
 }
@@ -136,6 +137,7 @@ method: post
 | action      | string  | 操作类型，登录设定为"Login"，调用智能合约设定为"invoke" |
 | qrcodeUrl         | string  | 二维码参数地址                                           |
 | callback         | string  | 选填，返回交易hash给dApp服务端                                           |
+| expire         | long  | 可选，二维码过期时间                         |
 
 根据二维码中qrcodeUrl链接，GET的的数据如下：
 
@@ -145,7 +147,6 @@ method: post
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
-	        "expire": 1546415363, //二维码过期时间
 		"invokeConfig": {
 			"contractHash": "16edbe366d1337eb510c2ff61099424c94aeef02",//合约hash
 			"functions": [{
