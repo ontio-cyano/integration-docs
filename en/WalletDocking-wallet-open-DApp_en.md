@@ -150,10 +150,10 @@ The data is as follows. Sending request after **URI encoding，Base64 encoding**
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"params": {
-		"type": "ontid or account",
+		"type": "account",
 		"dappName": "dapp Name",
 		"dappIcon": "dapp Icon",
-		"message": "helloworld",
+		"message": "helloworld"
 	}
 }
 ```
@@ -177,7 +177,7 @@ The data is as follows after **URI decoding，Base64 decoding**：
 	"version": "v1.0.0",
 	"id": "10ba038e-48da-487b-96e8-8d3b99b6d18a",	
 	"error": 0,
-    "desc": "SUCCESS",
+        "desc": "SUCCESS",
 	"result": {
 		"type": "ontid or account",
 		"user": "did:ont:AUEKhXNsoAT27HJwwqFGbpRy8QLHUMBMPz",
